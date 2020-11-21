@@ -1,0 +1,23 @@
+@import './public/variables.scss';
+
+.ErrorPage {
+    width: $widthSize;
+    height: 100vh;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    >h3 {
+        font-family: $textFont;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+        color: $blackColor;
+    }
+}

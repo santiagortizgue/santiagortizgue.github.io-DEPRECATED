@@ -1,0 +1,524 @@
+@import './public/variables.scss';
+
+.Home {
+  width: $widthSize;
+  height: auto;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+
+  padding-bottom: 40px;
+
+  /***Top***/
+
+  &-top {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
+    margin-bottom: 190px;
+
+    flex-shrink: 0;
+  }
+
+  &-img {
+    position: relative;
+    width: 355px;
+    height: 480px;
+    display: flex;
+    flex-shrink: 0;
+
+    //background-image: url('/img/imgPortada.jpg');
+    background-size: cover;
+    background-position: center;
+
+    margin-bottom: 33px;
+
+    >svg {
+      width: 14px;
+      height: 165px;
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+
+      >path {
+        fill: $blackColor;
+
+      }
+
+      >line {
+        stroke: $blackColor;
+      }
+    }
+  }
+
+  &-topInfo {
+    width: 355px;
+    height: auto;
+
+    >h3 {
+      width: 100%;
+      text-align: center;
+
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 36px;
+
+      color: $blackColor;
+
+      margin-bottom: 15px;
+    }
+
+    >h4 {
+      width: 100%;
+
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+
+      color: $blackColor;
+    }
+  }
+
+  &-strongColor {
+    color: $mainColor;
+  }
+
+  /***WhatIDo***/
+
+  &-whatIDo {
+    width: 100%;
+    height: 554px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    margin-bottom: 280px;
+  }
+
+  &-whatLeft {
+    width: 260px;
+    height: 100%;
+
+    >h3 {
+      width: 100%;
+      height: 235px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 26px;
+
+      color: $whiteColor;
+      background-color: $blackColor;
+    }
+  }
+
+  &-whatRight {
+    width: 380px;
+    height: 345px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
+
+  &-whatImg {
+    width: 100%;
+    height: 319px;
+   // background-image: url('/img/imgPortada.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  &-whatItem {
+    width: 100%;
+    height: 57px;
+
+    background-color: $whiteColor;
+
+    transition: ease-in-out all .2s;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    >h3 {
+      transition: ease-in-out all .2s;
+
+      color: $blackColor;
+
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+
+      margin-left: 20px;
+    }
+  }
+
+  &-WhatItemSelected {
+
+    background-color: $blackColor;
+
+    >h3 {
+      color: $whiteColor;
+    }
+  }
+
+  &-whatIcon {
+    width: 30px;
+    height: 30px;
+
+    fill: $blackColor;
+
+    margin-left: 20px;
+  }
+
+  &-WhatIconSelected {
+
+    fill: $whiteColor;
+  }
+
+  /***Recent***/
+
+  &-recentWork {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 194px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: flex-start;
+  }
+
+  &-leftRecent {
+    width: 190px;
+    height: 76px;
+    background-color: $blackColor;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* White */
+
+    color: $whiteColor;
+
+  }
+
+  &-rightRecent {
+    width: 520px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-end;
+  }
+
+  &-containerRecent {
+    width: 100%;
+    height: 260px;
+
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-start;
+  }
+
+  &-moreProjects {
+    transition: ease-in-out all .2s;
+    width: 105px;
+    height: 45px;
+
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 0px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: $whiteColor;
+
+    justify-content: center;
+    background-color: $blackColor;
+
+    &:hover {
+      background-color: $mainColor;
+    }
+  }
+
+  &-project {
+    width: 260px;
+    height: 260px;
+    background-color: $grayColor;
+  }
+
+  /***Contact***/
+
+  &-contact {
+    width: 100%;
+    height: 484px;
+
+    margin-bottom: 145px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: flex-start;
+  }
+
+  &-leftContact {
+    width: 465px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-end;
+    align-items: flex-end;
+
+    >h5 {
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 26px;
+      display: flex;
+      align-items: center;
+      text-align: right;
+
+      margin-bottom: 5px;
+
+      /* Black */
+
+      color: $blackColor;
+
+      margin-right: 36px;
+
+      >strong {
+        color: $mainColor;
+
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+    }
+
+    >h3 {
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 38px;
+      display: flex;
+      align-items: flex-end;
+      text-align: right;
+
+      margin-right: 36px;
+
+      /* Black */
+
+      color: $blackColor;
+    }
+  }
+
+  &-contactImg {
+    width: 100%;
+    height: 285px;
+
+    margin-bottom: 100px;
+    //background-image: url('/img/ContactImg.png');
+    background-size: cover;
+    background-position: center;
+
+    flex-shrink: 0;
+  }
+
+  &-rightContact {
+    width: 315px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: center;
+  }
+
+  &-containerContact {
+    width: 100%;
+    height: 283px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    align-content: flex-start;
+
+    text-align: left;
+
+    flex-shrink: 0;
+
+    background-color: $blackColor;
+
+    padding: 36px;
+
+    >h3 {
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 56px;
+      display: flex;
+      align-items: flex-end;
+
+      /* White */
+
+      color: $whiteColor;
+    }
+
+    >h5 {
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 32px;
+      display: flex;
+      align-items: flex-end;
+
+      /* White */
+
+      color: $whiteColor;
+
+      margin-bottom: 36px;
+    }
+  }
+
+  &-cv {
+    width: 100%;
+    height: 48px;
+
+    background-color: $whiteColor;
+
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Black */
+
+    color: $blackColor;
+
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+
+    transition: ease-in-out all .2s;
+
+    &:hover{
+      background-color: $mainColor;
+
+      color: $whiteColor;
+    }
+  }
+
+  /***Footer***/
+
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    height: auto;
+
+    >h4 {
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      display: flex;
+      align-items: flex-end;
+      text-align: center;
+
+      /* Black */
+
+      color: $blackColor;
+    }
+  }
+}

@@ -1,0 +1,179 @@
+@import './public/variables.scss';
+
+
+.Logo {
+  width: 40px;
+  height: 23px;
+  
+  position: fixed;
+  top: 40px;
+  left: 40px;
+
+  >svg{
+    width: 100%;
+    height: 100%;
+
+    >path {
+      fill: $blackColor;
+      transition: ease-in-out all .2s;
+    }
+  
+    &:hover {
+      >path {
+        fill: $mainColor;
+      }
+    }
+
+  }
+}
+
+.Menu {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+
+  &-icon {
+    width: 20px;
+    height: 18px;
+
+    >path {
+      fill: $blackColor;
+    }
+  }
+
+  &-container {
+    width: 50px;
+    height: 95px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-end;
+    flex-shrink: 0;
+  }
+
+  &-item {
+    font-family: $textFont;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: right;
+    color: $blackColor;
+
+    transition: ease-in-out all .2s;
+
+    &:hover{
+      color: $mainColor;
+
+      &::after{
+        background-color: $mainColor;
+      }
+    }
+  }
+
+  &-itemSelected{
+    position: relative;
+
+    &::after{
+     content: '';
+     width: 5px;
+     height: 5px;
+     border-radius: 5px;
+     background-color: $blackColor; 
+     display: flex;
+     flex-shrink: 0;
+
+     position: absolute;
+     right: -10px;
+     bottom: 4.5px;
+    }
+  }
+}
+
+.MenuSocialMedia {
+  width: 20px;
+  height: 140px;
+
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+
+  >a {
+    width: 20px;
+    height: 20px;
+
+    >svg {
+      width: 100%;
+      height: 100%;
+
+      >path {
+
+        fill: $blackColor;
+
+        transition: ease-in-out all .2s;
+      }
+
+      &:hover {
+        >path {
+          fill: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+.Message {
+  background-color: $blackColor;
+
+  width: 45px;
+  height: 45px;
+
+  position: fixed;
+
+  bottom: 40px;
+  right: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  >svg {
+      width: 22px;
+      height: 22px;
+
+      transition: ease-in-out all .2s;
+
+      >path {
+          fill: $whiteColor;
+      }
+  }
+
+  &:hover {
+
+      >svg {
+          width: 27px;
+          height: 27px;
+      }
+  }
+}
+
+.ScrollAnimation{
+  width: 45px;
+  height: 45px;
+
+  position: fixed;
+
+  bottom: 40px;
+  right: 100px;
+}

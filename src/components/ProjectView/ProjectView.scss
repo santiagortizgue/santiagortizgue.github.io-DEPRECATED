@@ -1,0 +1,409 @@
+@import './public/variables.scss';
+
+.ProjectView {
+    width: $widthSize;
+    height: auto;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
+    padding-bottom: 40px;
+
+    &-header {
+        margin-top: 40px;
+
+        width: 100%;
+        height: 245px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+
+        margin-bottom: 45px;
+    }
+
+    &-Logo {
+        width: 415px;
+        height: 100%;
+    }
+
+    &-about {
+        width: 100%;
+        height: 185px;
+        display: flex;
+
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: flex-start;
+
+        margin-bottom: 148px;
+
+        >h3 {
+            font-family: $titleFont;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 42px;
+
+            color: $blackColor;
+        }
+
+        >p {
+            width: 307px;
+
+            font-family: $textFont;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+
+            color: $blackColor;
+        }
+    }
+
+    &-wireframes {
+        display: flex;
+
+        width: 100%;
+        height: 365px;
+
+        margin-bottom: 155px;
+    }
+
+    &-goal {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+
+        margin-bottom: 155px;
+
+        >h3 {
+            font-family: $titleFont;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 42px;
+
+            color: $blackColor;
+        }
+
+        >p {
+
+            margin-left: 55px;
+
+            width: 307px;
+
+            font-family: $textFont;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+
+            color: $blackColor;
+        }
+    }
+
+    &-topic {
+        width: 100%;
+        height: 275px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        margin-bottom: 82px;
+
+    }
+
+    &-topicInfo {
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+
+        >h3 {
+            font-family: $titleFont;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 42px;
+
+            color: $blackColor;
+
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        >p {
+            width: 272px;
+            height: auto;
+
+            font-family: $textFont;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: left;
+
+            color: $blackColor;
+
+        }
+    }
+
+    &-topicInfo2 {
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: center;
+
+        >h3 {
+            font-family: $titleFont;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 42px;
+
+            color: $blackColor;
+
+            margin-bottom: 25px;
+            text-align: right;
+        }
+
+        >p {
+            width: 272px;
+            height: auto;
+
+            font-family: $textFont;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+
+            color: $blackColor;
+            text-align: right;
+
+        }
+    }
+
+    &-topicImg {
+        width: 380px;
+        height: 100%;
+    }
+
+    &-options {
+        width: 100%;
+        height: 105px;
+
+        margin-top: 45px;
+        margin-bottom: 70px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: flex-end;
+    }
+
+    &-moreTitle {
+        width: 100%;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $mainColor;
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    &-contButtons {
+        height: 45px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: flex-end;
+    }
+
+    &-git {
+        width: 45px;
+        height: 45px;
+
+        background-color: $blackColor;
+
+        padding: 7.5px;
+
+        >svg {
+            fill: $whiteColor;
+            width: 100%;
+            height: 100%;
+        }
+
+        transition: .2s ease-in-out all;
+
+        &:hover {
+            background-color: $mainColor;
+        }
+
+        margin-right: 15px;
+    }
+
+    &-behance {
+        width: 70px;
+        height: 70px;
+
+        background-color: $blackColor;
+
+        padding: 7.5px;
+
+        >svg {
+            fill: $whiteColor;
+            width: 100%;
+            height: 100%;
+        }
+
+        transition: .2s ease-in-out all;
+
+        &:hover {
+            background-color: $mainColor;
+        }
+
+        margin-right: 15px;
+    }
+
+    &-test {
+        width: 130px;
+        height: 45px;
+
+        background-color: $blackColor;
+
+        text-decoration: none;
+        font-family: $textFont;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: $whiteColor;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        transition: .2s ease-in-out all;
+
+        &:hover {
+            background-color: $mainColor;
+        }
+    }
+
+    &-build {
+        width: 305px;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: flex-end;
+
+        >h3 {
+            font-family: $titleFont;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 33px;
+            text-align: right;
+
+            color: $blackColor;
+        }
+    }
+
+    &-contBuild {
+        height: 45px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        >img {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    /***Footer***/
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        height: auto;
+
+        >h4 {
+            font-family: $textFont;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+
+            /* Black */
+
+            color: $blackColor;
+        }
+    }
+}

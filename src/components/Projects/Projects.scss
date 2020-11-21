@@ -1,0 +1,83 @@
+@import './public/variables.scss';
+
+.Projects {
+  width: $widthSize;
+  height: auto;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+
+  padding-bottom: 40px;
+
+  /** Container **/
+
+  &-containter {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-start;
+  }
+
+  &-moreProjects {
+    width: $sizeProjectCard;
+    height: $sizeProjectCard;
+    background-color: $blackColor;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: none;
+
+    >h3 {
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      color: $whiteColor;
+    }
+  }
+
+  /** Footer **/
+
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    height: auto;
+
+    >h4 {
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      display: flex;
+      align-items: flex-end;
+      text-align: center;
+
+      /* Black */
+
+      color: $blackColor;
+    }
+  }
+}

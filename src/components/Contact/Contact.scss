@@ -1,0 +1,219 @@
+@import './public/variables.scss';
+
+.Contact{
+  width: $widthSize;
+  height: 100vh;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+   /***Contact***/
+
+   &-contact {
+    width: 100%;
+    height: 484px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: flex-start;
+  }
+
+  &-leftContact {
+    width: 465px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-end;
+    align-items: flex-end;
+
+    >h5 {
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 26px;
+      display: flex;
+      align-items: center;
+      text-align: right;
+
+      margin-bottom: 5px;
+
+      /* Black */
+
+      color: $blackColor;
+
+      margin-right: 36px;
+
+      >strong {
+        color: $mainColor;
+
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+    }
+
+    >h3 {
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 38px;
+      display: flex;
+      align-items: flex-end;
+      text-align: right;
+
+      margin-right: 36px;
+
+      /* Black */
+
+      color: $blackColor;
+    }
+  }
+
+  &-contactImg {
+    width: 100%;
+    height: 285px;
+
+    margin-bottom: 100px;
+    //background-image: url('/img/ContactImg.png');
+    background-size: cover;
+    background-position: center;
+
+    flex-shrink: 0;
+  }
+
+  &-rightContact {
+    width: 315px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: center;
+  }
+
+  &-containerContact {
+    width: 100%;
+    height: 283px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    align-content: flex-start;
+
+    text-align: left;
+
+    flex-shrink: 0;
+
+    background-color: $blackColor;
+
+    padding: 36px;
+
+    >h3 {
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 56px;
+      display: flex;
+      align-items: flex-end;
+
+      /* White */
+
+      color: $whiteColor;
+    }
+
+    >h5 {
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 32px;
+      display: flex;
+      align-items: flex-end;
+
+      /* White */
+
+      color: $whiteColor;
+
+      margin-bottom: 36px;
+    }
+  }
+
+  &-cv {
+    width: 100%;
+    height: 48px;
+
+    background-color: $whiteColor;
+
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Black */
+
+    color: $blackColor;
+
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+
+    transition: ease-in-out all .2s;
+
+    &:hover{
+      background-color: $mainColor;
+
+      color: $whiteColor;
+    }
+  }
+
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    height: auto;
+
+    >h4 {
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      display: flex;
+      align-items: flex-end;
+      text-align: center;
+
+      /* Black */
+
+      color: $blackColor;
+    }
+  }
+}
