@@ -21,7 +21,7 @@ const Contact = () => {
       <div className="Contact-contact">
         <div className="Contact-leftContact">
 
-          <Fade timeout={1000} top>
+          <Fade timeout={1000} left>
             <div style={{ backgroundImage: "url('./img/ContactImg.png')" }} className="Home-contactImg"></div>
           </Fade>
           <Fade timeout={1000} delay={50} bottom>

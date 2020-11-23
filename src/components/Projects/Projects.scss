@@ -1,7 +1,7 @@
 @import './public/variables.scss';
 
 .Projects {
-  width: $widthSize;
+  width: $widthSize-720;
   height: auto;
   flex-shrink: 0;
 
@@ -12,14 +12,49 @@
   align-content: center;
   align-items: center;
 
+  padding-top: 40px;
   padding-bottom: 40px;
 
   /** Container **/
 
-  &-containter {
+  &-projects{
     width: 100%;
     height: auto;
-    min-height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    margin-bottom: 120px;
+  }
+
+  &-projectsLeft{
+
+    width: 151px;
+    height: auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 120%;
+
+      color: $blackColor;
+
+      text-align: right;
+  }
+
+  &-projectsRight {
+    width: 610px;
+    height: auto;
 
     display: flex;
     flex-direction: row;
@@ -29,28 +64,51 @@
     align-items: flex-start;
   }
 
-  &-moreProjects {
-    width: $sizeProjectCard;
-    height: $sizeProjectCard;
-    background-color: $blackColor;
+  &-freestyle{
+    width: 100%;
+    height: auto;
 
     display: flex;
-    justify-content: center;
-    align-content: center;
-    border: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
 
-    >h3 {
-      font-family: $titleFont;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 32px;
+    margin-bottom: 120px;
+  }
+
+  &-freestyleLeft{
+    
+    width: 151px;
+    height: auto;
+
       display: flex;
+      justify-content: center;
       align-items: center;
       text-align: center;
 
-      color: $whiteColor;
-    }
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 120%;
+
+      color: $blackColor;
+
+      text-align: right;
+  }
+
+  &-freestyleRight {
+    width: 610px;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-start;
   }
 
   /** Footer **/

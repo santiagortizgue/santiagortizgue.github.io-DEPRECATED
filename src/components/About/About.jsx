@@ -4,7 +4,6 @@ import Fade from 'react-reveal/Fade';
 
 import './About.scss';
 import Store from '../../utils/stores/Stores';
-import { InfoSVG } from '../../utils/JSHelpers/Helper';
 
 const About = () => {
   const stores = useContext(Store);
@@ -18,27 +17,10 @@ const About = () => {
 
   function changeRightInfoHandler(value) {
     return (
-      <Fade timeout={1000} delay={150} right>
         <div className="About-infoRight">
-            <img className="About-infoImg" src={`${value.img}`} alt="Imagen"/>
-            <div className="About-infoDetail">
-              <h3>{value.name}</h3>
-              {(value.type === 'talent') ?
-                <h5>{value.data}</h5> : ''}
-              {(value.type === 'skill') ?
-                <div className="About-contSofware">
-                  {value.data.map((idImg, id) => {
-                    return (
-                      <Fade key={idImg} timeout={1000} delay={id*100}>
-                        <img src={`./img/iconSoftware/${idImg}.png`} alt="software logo" />
-                      </Fade>
-                      )
-                  })}
-                </div>
-                : ''}
-            </div>
+          <img className="About-infoImg" src={`${value.img}`} alt="Imagen" />
+          <h5 className="About-infoDetail">{value.data}</h5>
         </div>
-      </Fade>
     )
   }
 
@@ -67,14 +49,20 @@ const About = () => {
 
         <Fade timeout={2000} delay={350}>
           <div className="About-topRight">
-            <p>I’m Santiago, a 21 years old Colombian <strong>‘Interactive Designer’</strong> from ICESI University. I’ve worked with <strong className="strongColor">user experience</strong> and <strong className="strongColor">development</strong> on multiple platforms.
-              <br></br> <br></br> <br></br> My <strong className="strongColor2">creativity</strong> allows me to build experiences and interfaces, based on human feelings and needs. I'm <strong className="strongColor2">always learning</strong> new methodologies, software and strategies to develop these experiences.
+            <p>I’m Santiago, a 21 years old Colombian <strong>Product Designer</strong> from ICESI University. I’ve worked with <strong>user interface</strong>, <strong>user experience</strong> and <strong>development</strong> on multiple platforms.
+              <br></br> <br></br> <br></br> My <strong>creativity</strong> allows me to build experiences and interfaces, based on human feelings and needs. I'm <strong>always learning</strong> new methodologies, software and strategies to develop these experiences.
             </p>
           </div>
         </Fade>
       </div>
 
       <div className="About-info">
+
+      <Fade timeout={1000} delay={150} left>
+        {changeRightInfoHandler(stores.uiStore.actualInfo)}
+      </Fade>
+
+      <Fade timeout={1000} delay={150} right>
         <div className="About-infoLeft">
 
           <h4>Experience & Skills</h4>
@@ -84,16 +72,14 @@ const About = () => {
               let classInfo = (elem.id === stores.uiStore.idActualInfo) ? "About-infoItem About-infoItemSelected" : "About-infoItem";
               if (elem.type === stores.uiStore.typeSkill) {
                 return (
-                  <Fade key={elem.id} timeout={1000} delay={elem.id * 150}>
                     <div onClick={(e) => {
                       e.preventDefault();
                       stores.uiStore.changeInfoHandler(elem.id);
                     }} key={elem.id} className={classInfo}>
 
-                      <InfoSVG i={elem.icon} selected={elem.id === stores.uiStore.idActualInfo} />
+                      <p>{elem.name}</p>
 
                     </div>
-                  </Fade>
                 )
               } else {
                 return '';
@@ -108,14 +94,14 @@ const About = () => {
               let classInfo = (elem.id === stores.uiStore.idActualInfo) ? "About-infoItem About-infoItemSelected" : "About-infoItem";
               if (elem.type === stores.uiStore.typeTalent) {
                 return (
-                  <Fade key={elem.id} timeout={1000} delay={elem.id * 150}>
                     <div onClick={(e) => {
                       e.preventDefault();
                       stores.uiStore.changeInfoHandler(elem.id);
                     }} key={elem.id} className={classInfo}>
-                      <InfoSVG i={elem.icon} selected={elem.id === stores.uiStore.idActualInfo} />
+                      
+                      <p>{elem.name}</p>
+
                     </div>
-                  </Fade>
                 )
               } else {
                 return '';
@@ -124,31 +110,32 @@ const About = () => {
           </div>
 
         </div>
-        {changeRightInfoHandler(stores.uiStore.actualInfo)}
+        </Fade>
       </div >
 
-      <div className="About-research">
-        <div className="About-researchLeft">
-          <div className="About-data">
-            <Fade timeout={1000} left>
-              <h4>2018 - 2019</h4>
-              <h6>Audio-tactile priming to guide information recall in edutainment</h6>
-            </Fade>
-            <Fade timeout={1000} delay={250} left>
-              <h4>2019</h4>
-              <h6>Thesis (Coming Soon!)</h6>
-            </Fade>
+      <Fade timeout={1000} top>
+        <div className="About-research">
+
+          <h3 className="About-researchTitle">
+            Research
+          </h3>
+
+          <div className="About-researchList">
+
+            {stores.projectStore.arrayResearch.map((elem, index) => {
+              return (
+                <div key={index} className="About-data">
+                  <h6>{elem.year}</h6>
+                  {elem.link !== null ? <a rel="noopener noreferrer" target="_blank" href={elem.link}>{elem.name}</a> : <p>{elem.name}</p>}
+                </div>
+              )
+            })}
+
           </div>
-        </div>
-        <div className="About-researchRight">
 
-          <h3>Research</h3>
-
-          <Fade timeout={1000} right>
-            <div style={{ backgroundImage: "url('./img/imgPortada.jpg')" }} className="About-researchImg"></div>
-          </Fade>
+          <div style={{ backgroundImage: "url('./img/imgResearch.png')" }} className="About-researchImg"></div>
         </div>
-      </div>
+      </Fade>
 
       <footer className="footer">
         <h4>© 2019 Santiago Ortiz Guevara.</h4>

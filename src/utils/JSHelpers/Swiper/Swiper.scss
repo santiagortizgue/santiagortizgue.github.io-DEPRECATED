@@ -1,0 +1,84 @@
+@import './public/variables.scss';
+
+.Swiper-left{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+
+    bottom: 10px;
+    left: 10px;
+    
+    z-index: 10;
+
+    position: absolute;
+
+    background-color: $blackColor;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    transition: .2s ease-in-out all;
+
+    &:hover{
+        background-color: $mainColor;
+    }
+
+    >svg{
+
+        width: 9px;
+        height: 16px;
+
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+
+        >path{
+            stroke: $whiteColor;
+        }
+    }
+}
+
+.Swiper-right{
+
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+
+    bottom: 10px;
+    right: 10px;
+    
+    z-index: 10;
+
+    position: absolute;
+
+    background-color: $blackColor;   
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    transition: .2s ease-in-out all;
+
+    &:hover{
+        background-color: $mainColor;
+    }
+
+
+    >svg{
+
+        width: 9px;
+        height: 16px;
+
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+
+        >path{
+            stroke: $whiteColor;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 @import './public/variables.scss';
 
 .Home {
-  width: $widthSize;
+  width: $widthSize-720;
   height: auto;
   flex-shrink: 0;
 
@@ -27,7 +27,7 @@
     align-content: center;
     align-items: center;
 
-    margin-bottom: 190px;
+    margin-bottom: 150px;
 
     flex-shrink: 0;
   }
@@ -104,27 +104,27 @@
 
   &-whatIDo {
     width: 100%;
-    height: 554px;
+    height: auto;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 
     flex-shrink: 0;
 
-    margin-bottom: 280px;
+    margin-bottom: 150px;
   }
 
   &-whatLeft {
-    width: 260px;
-    height: 100%;
+    width: 151px;
+    height: auto;
 
     >h3 {
       width: 100%;
-      height: 235px;
+      height: auto;
 
       display: flex;
       justify-content: center;
@@ -134,89 +134,61 @@
       font-family: $titleFont;
       font-style: normal;
       font-weight: bold;
-      font-size: 22px;
-      line-height: 26px;
+      font-size: 30px;
+      line-height: 120%;
 
-      color: $whiteColor;
-      background-color: $blackColor;
+      color: $blackColor;
+
+      text-align: right;
     }
   }
 
   &-whatRight {
-    width: 380px;
-    height: 345px;
+    width: auto;
+    height: auto;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
     align-items: center;
   }
 
-  &-whatImg {
-    width: 100%;
-    height: 319px;
-   // background-image: url('/img/imgPortada.jpg');
-    background-position: center;
-    background-size: cover;
+  &-profile{
+    width: 240px;
+    height: auto;
+
+    margin-right: 20px;
   }
 
-  &-whatItem {
-    width: 100%;
-    height: 57px;
-
-    background-color: $whiteColor;
-
-    transition: ease-in-out all .2s;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: center;
-
-    cursor: pointer;
-
-    >h3 {
-      transition: ease-in-out all .2s;
-
-      color: $blackColor;
-
-      font-family: $textFont;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 24px;
-      display: flex;
-      align-items: center;
-
-      margin-left: 20px;
-    }
+  &-other{
+    width: 240px;
+    height: auto;
   }
 
-  &-WhatItemSelected {
+  &-whatTitle{
+    color: $blackColor;
 
-    background-color: $blackColor;
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
 
-    >h3 {
-      color: $whiteColor;
-    }
+    margin-bottom: 16px;
   }
 
-  &-whatIcon {
-    width: 30px;
-    height: 30px;
+  &-whatText{
+    color: $blackColor;
 
-    fill: $blackColor;
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
 
-    margin-left: 20px;
-  }
-
-  &-WhatIconSelected {
-
-    fill: $whiteColor;
+    margin-bottom: 3px;
   }
 
   /***Recent***/
@@ -225,44 +197,40 @@
     width: 100%;
     height: auto;
 
-    margin-bottom: 194px;
+    margin-bottom: 130px;
 
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-content: center;
     align-items: flex-start;
   }
 
   &-leftRecent {
-    width: 190px;
-    height: 76px;
-    background-color: $blackColor;
+    width: 151px;
+    height: auto;
 
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
 
-    font-family: $titleFont;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 26px;
-    display: flex;
-    align-items: center;
-    text-align: center;
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 120%;
 
-    /* White */
+      color: $blackColor;
 
-    color: $whiteColor;
+      text-align: right;
 
   }
 
   &-rightRecent {
-    width: 520px;
-    height: 100%;
+    width: 610px;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -274,7 +242,7 @@
 
   &-containerRecent {
     width: 100%;
-    height: 260px;
+    height: auto;
 
     flex-shrink: 0;
     display: flex;
@@ -283,32 +251,10 @@
     justify-content: flex-start;
     align-content: center;
     align-items: flex-start;
+
+    margin-bottom: 24px;
   }
 
-  &-moreProjects {
-    transition: ease-in-out all .2s;
-    width: 105px;
-    height: 45px;
-
-    font-family: $textFont;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 0px;
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: $whiteColor;
-
-    justify-content: center;
-    background-color: $blackColor;
-
-    &:hover {
-      background-color: $mainColor;
-    }
-  }
 
   &-project {
     width: 260px;
@@ -521,4 +467,5 @@
       color: $blackColor;
     }
   }
+
 }

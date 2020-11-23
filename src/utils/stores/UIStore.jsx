@@ -4,26 +4,20 @@ class UIStore {
 
     /** Home */
 
-    arrayWhat = [{
+    arrayWhatProfile = [{
         id: 0,
-        icon: 0,
-        data: 'Research through Design',
-        selected: true
+        data: 'User Interface Design'
     }, {
         id: 1,
-        icon: 1,
-        data: 'Web, App & Game Development',
-        selected: false
+        data: 'User Experience Design'
+    }];
+
+    arrayWhatOther = [{
+        id: 0,
+        data: 'Front-End Development'
     }, {
-        id: 2,
-        icon: 2,
-        data: 'User Experience & User Interface',
-        selected: false
-    }, {
-        id: 3,
-        icon: 3,
-        data: 'Prototyping',
-        selected: false
+        id: 1,
+        data: 'Photography'
     }];
 
     selectWhat(i) {
@@ -67,72 +61,66 @@ class UIStore {
     typeSkill = 'skill';
     typeTalent = 'talent';
 
-    arrayInfo = [{
-        name: 'Web Development',
-        id: 0,
-        icon: 3,
-        img: './img/about/webDev.png',
-        type: 'skill',
-        data: [4, 5, 6, 7, 20]
-    }, {
-        name: 'App Development',
+    arrayInfo = [
+        {
+            name: 'UI Design',
+            id: 0,
+            icon: 2,
+            img: './img/about/ui.png',
+            type: 'skill',
+            data: "Text"
+        },{
+        name: 'Prototyping',
         id: 1,
         icon: 4,
         img: './img/about/appDev.png',
         type: 'skill',
-        data: [6, 7, 10]
+        data: "Text"
     },{
-        name: 'UX Design - Prototyping',
+        name: 'UX Design',
         id: 2,
         icon: 1,
         img: './img/about/ux.png',
         type: 'skill',
-        data: [12, 13]
-    }, {
-        name: 'UI Design',
-        id: 3,
-        icon: 2,
-        img: './img/about/ui.png',
-        type: 'skill',
-        data: [12, 16, 17, 18]
+        data: "Text"
     },{
-        name: 'Game Development',
-        id: 4,
-        icon: 5,
-        img: './img/about/gameDev.png',
-        type: 'skill',
-        data: [8, 9, 11]
-    }, {
         name: '3D Modeling',
-        id: 5,
+        id: 3,
         icon: 6,
         img: './img/about/3dModeling.png',
         type: 'skill',
-        data: [14, 15]
+        data: "Text"
+    }, {
+        name: 'Web Development',
+        id: 4,
+        icon: 3,
+        img: './img/about/webDev.png',
+        type: 'skill',
+        data: "Text"
     }, {
         name: 'Problem Solving',
-        id: 6,
+        id: 5,
         icon: 8,
         img: './img/about/problemSolving.jpg',
         type: 'talent',
         data: "Using research through design to find solutions for people's challenges, complexities & needs."
     }, {
         name: 'Results Orientation',
-        id: 7,
+        id: 6,
         icon: 9,
         img: './img/about/resultOrientation.jpg',
         type: 'talent',
         data: "Constantly remembering the objective and goals, allows my work to satisfy the required guidelines."
     }, {
         name: 'Team Work',
-        id: 8,
+        id: 7,
         icon: 10,
         img: './img/grayBackground.png',
         type: 'talent',
         data: "Working with my colleagues to achieve the objectives. I find my place to strengthen the work of my workmates."
     }, {
         name: 'Creativity',
-        id: 9,
+        id: 8,
         icon: 7,
         img: './img/grayBackground.png',
         type: 'talent',

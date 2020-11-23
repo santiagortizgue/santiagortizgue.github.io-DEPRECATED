@@ -1,7 +1,7 @@
 @import './public/variables.scss';
 
 .ProjectView {
-    width: $widthSize;
+    width: $widthSize-720;
     height: auto;
     flex-shrink: 0;
 
@@ -9,89 +9,60 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-content: center;
-    align-items: center;
+    align-content: flex-start;
+    align-items: flex-start;
 
+    padding-top: 40px;
     padding-bottom: 40px;
 
     &-header {
-        margin-top: 40px;
+        width: 445px;
+        height: auto;
 
-        width: 100%;
-        height: 245px;
+        font-family: $titleFont;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 120%;
 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-content: center;
-        align-items: center;
+        color: $blackColor;
 
-        margin-bottom: 45px;
+        margin-top: 45px;
     }
 
-    &-Logo {
-        width: 415px;
-        height: 100%;
-    }
-
-    &-about {
-        width: 100%;
-        height: 185px;
-        display: flex;
-
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: flex-start;
-        align-items: flex-start;
-
-        margin-bottom: 148px;
-
-        >h3 {
-            font-family: $titleFont;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 36px;
-            line-height: 42px;
-
-            color: $blackColor;
-        }
-
-        >p {
-            width: 307px;
-
-            font-family: $textFont;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 18px;
-
-            color: $blackColor;
-        }
-    }
-
-    &-wireframes {
-        display: flex;
-
-        width: 100%;
-        height: 365px;
-
-        margin-bottom: 155px;
-    }
-
-    &-goal {
+    &-coverContainer{
+        margin-top: 54px;
         width: 100%;
         height: auto;
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+
+    &-cover{
+        width: 637px;
+        height: 376px;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    &-about {
+        margin-top: 90px;
+
+        width: 100%;
+        height: auto;
+        display: flex;
+
+        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: flex-start;
         align-content: flex-start;
         align-items: flex-start;
-
-        margin-bottom: 155px;
 
         >h3 {
             font-family: $titleFont;
@@ -101,127 +72,169 @@
             line-height: 42px;
 
             color: $blackColor;
+
+            margin-bottom: 15px;
         }
 
         >p {
-
-            margin-left: 55px;
-
-            width: 307px;
+            width: 452px;
 
             font-family: $textFont;
             font-style: normal;
             font-weight: normal;
             font-size: 14px;
-            line-height: 18px;
+            line-height: 140%;
 
             color: $blackColor;
         }
     }
 
-    &-topic {
+    &-wireframes {
         width: 100%;
-        height: 275px;
+        height: auto;
+
+        margin-top: 90px;
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-content: center;
-        align-items: center;
-
-        margin-bottom: 82px;
-
-    }
-
-    &-topicInfo {
-        height: 100%;
-
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
+        align-content: flex-start;
         align-items: flex-start;
-        align-content: center;
-
-        >h3 {
-            font-family: $titleFont;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 36px;
-            line-height: 42px;
-
-            color: $blackColor;
-
-            margin-bottom: 25px;
-            text-align: left;
-        }
-
-        >p {
-            width: 272px;
-            height: auto;
-
-            font-family: $textFont;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 18px;
-            text-align: left;
-
-            color: $blackColor;
-
-        }
     }
 
-    &-topicInfo2 {
-        height: 100%;
+    &-wireSmall{
+        width: 265px;
+        height: 284px;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    &-wireBig{
+        width: 505px;
+        height: 284px;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    &-role {
+        width: 100%;
+        height: auto;
+
+        margin-top: 90px;
 
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-end;
-        align-content: center;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: flex-start;
 
         >h3 {
+            width: 248px;
+
+            text-align: right;
+
             font-family: $titleFont;
             font-style: normal;
-            font-weight: 800;
-            font-size: 36px;
-            line-height: 42px;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 120%;
 
             color: $blackColor;
-
-            margin-bottom: 25px;
-            text-align: right;
         }
 
-        >p {
-            width: 272px;
-            height: auto;
+        >p {    
+
+            width: 505px;
 
             font-family: $textFont;
             font-style: normal;
             font-weight: normal;
             font-size: 14px;
-            line-height: 18px;
+            line-height: 140%;
 
             color: $blackColor;
-            text-align: right;
-
         }
     }
 
-    &-topicImg {
-        width: 380px;
+    &-topicContainer{
+        width: 100%;
+        height: auto;
+
+        margin-top: 45px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+
+    &-topic {
+        width: 100%;
+        height: auto;
+
+        margin-top: 35px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: flex-start;
+
+        >h3 {
+            width: 248px;
+
+            text-align: right;
+
+            font-family: $titleFont;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 120%;
+
+            color: $blackColor;
+        }
+
+        >p {    
+
+            width: 505px;
+
+            font-family: $textFont;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 140%;
+
+            color: $blackColor;
+        }
+    }
+
+    &-slides{
+        width: 100%;
+        height: 439px;
+
+        display: flex;
+        flex-shrink: 0;
+
+        margin-top: 90px;
+    }
+
+    &-slide{
+        width: 100%;
         height: 100%;
     }
 
     &-options {
         width: 100%;
-        height: 105px;
+        height: auto;
 
-        margin-top: 45px;
+        margin-top: 90px;
         margin-bottom: 70px;
 
         display: flex;
@@ -229,29 +242,35 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         align-content: center;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     &-moreTitle {
-        width: 100%;
-        font-family: Raleway;
+        font-family: $titleFont;
         font-style: normal;
-        font-weight: 800;
-        font-size: 28px;
-        line-height: 33px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: $mainColor;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 120%;
+    }
+
+    &-moreContainer{
+        width: 50%;
+        height: auto;
 
         display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
     }
 
     &-contButtons {
         height: 45px;
+
+        width: auto;
+
+        margin-top: 25px;
 
         display: flex;
         flex-direction: row;
@@ -285,8 +304,8 @@
     }
 
     &-behance {
-        width: 70px;
-        height: 70px;
+        width: 45px;
+        height: 45px;
 
         background-color: $blackColor;
 
@@ -318,7 +337,7 @@
         font-style: normal;
         font-weight: bold;
         font-size: 14px;
-        line-height: 18px;
+        line-height: 120%;
         display: flex;
         align-items: center;
         text-align: center;
@@ -339,9 +358,9 @@
         }
     }
 
-    &-build {
-        width: 305px;
-        height: 100%;
+    &-teammates {
+        width: 50%;
+        height: auto;
 
         display: flex;
         flex-direction: column;
@@ -353,29 +372,43 @@
         >h3 {
             font-family: $titleFont;
             font-style: normal;
-            font-weight: 800;
-            font-size: 28px;
-            line-height: 33px;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 120%;
+
             text-align: right;
 
             color: $blackColor;
         }
     }
 
-    &-contBuild {
-        height: 45px;
+    &-contTeammates {
+        height: auto;
         width: 100%;
 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
+        margin-top: 25px;
 
-        >img {
-            width: 45px;
-            height: 45px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-end;
+
+        >a {
+            font-family: $textFont;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 120%;
+            /* or 17px */
+            
+            text-align: right;
+            text-decoration-line: underline;
+
+            color: $blackColor;
+
+            margin-bottom: 10px;
         }
     }
 

@@ -1,7 +1,7 @@
 @import './public/variables.scss';
 
 .About {
-  width: $widthSize;
+  width: $widthSize-720;
   height: auto;
   flex-shrink: 0;
 
@@ -29,7 +29,7 @@
 
     margin-top: 85px;
 
-    margin-bottom: 275px;
+    margin-bottom: 93px;
   }
 
   &-topLeft {
@@ -57,42 +57,43 @@
   }
 
   &-name {
-    width: 215px;
+    width: 221px;
     height: 75px;
 
     position: absolute;
 
     top: 35px;
-    right: -130px;
+    right: -135px;
 
     >h4 {
+      width: 100%;
       font-family: $titleFont;
       font-style: normal;
       font-weight: 900;
       font-size: 46px;
-      line-height: 46px;
+      line-height: 120%;
 
       color: $blackColor;
     }
 
     >h6 {
+      width: 100%;
       font-family: $titleFont;
       font-style: normal;
       font-weight: 500;
       font-size: 32px;
-      line-height: 22px;
+      line-height: 115%;
 
       color: $blackColor;
     }
   }
 
   &-title {
-    width: 215px;
-    height: 90px;
 
-    background-color: $blackColor;
+    margin-top: 15px;
 
-    padding: 20px;
+    width: auto;
+    height: auto;
 
     >h4 {
       width: auto;
@@ -101,9 +102,9 @@
       font-style: normal;
       font-weight: 900;
       font-size: 35px;
-      line-height: 28px;
+      line-height: 120%;
 
-      color: $whiteColor;
+      color: $blackColor;
     }
 
     >h6 {
@@ -113,16 +114,16 @@
       font-style: normal;
       font-weight: normal;
       font-size: 24px;
-      line-height: 22px;
+      line-height: 120%;
 
-      color: $whiteColor;
+      color: $blackColor;
 
       text-transform: uppercase;
     }
   }
 
   &-topRight {
-    width: 310px;
+    width: 366px;
     height: 200px;
 
     >p {
@@ -136,20 +137,6 @@
       line-height: 18px;
 
       color: $blackColor;
-
-      >.strongColor {
-        color: $mainColor;
-      }
-
-      >.strongColor2 {
-        font-family: $titleFont;
-        font-style: italic;
-        font-weight: 900;
-        letter-spacing: 0.03em;
-
-        color: $mainColor;
-
-      }
       /*
       text-align: justify;
       text-justify: inter-character;
@@ -157,12 +144,11 @@
     }
   }
 
-
   /*** Info ***/
 
   &-info {
     width: 100%;
-    height: 330px;
+    height: auto;
 
     flex-shrink: 0;
 
@@ -170,20 +156,20 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: center;
-    align-items: center;
+    align-content: flex-start;
+    align-items: flex-start;
 
-    margin-bottom: 360px;
+    margin-bottom: 175px;
   }
 
   &-infoLeft {
-    width: auto;
-    height: 230px;
+    width: 276px;
+    height: auto;
 
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
 
@@ -207,120 +193,84 @@
 
   &-contSkills {
     width: 100%;
-    height: 50px;
+    height: auto;
 
     margin-bottom: 45px;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: flex-start;
-  }
-
-  &-contTalents {
-    width: 100%;
-    height: 50px;
-
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: flex-start;
-  }
-
-  &-infoItem {
-    width: 50px;
-    height: 50px;
-
-    background-color: $whiteColor;
-
-    transition: ease-in-out all .2s;
-
-    margin-right: 9px;
-
-    flex-shrink: 0;
-
-    padding: 5px;
-  }
-
-  &-infoItemSelected {
-    background-color: $blackColor;
-  }
-
-  &-infoIcon {
-    width: 100%;
-    height: 100%;
-
-    fill: $blackColor;
-
-    transition: ease-in-out all .2s;
-  }
-
-  &-infoIconSelected {
-    fill: $whiteColor;
-  }
-
-  &-infoRight {
-    width: 300px;
-    height: 100%;
-  }
-
-  &-infoImg {
-    width: 100%;
-    height: 205px;
-    display: flex;
-  }
-
-  &-infoDetail {
-    width: 100%;
-    height: 125px;
-    background-color: $blackColor;
-    padding: 20px;
 
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-content: center;
-    align-items: center;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
 
-    >h3 {
-      width: 100%;
-      font-family: $titleFont;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 18px;
-      line-height: 25px;
+  &-contTalents {
+    width: 100%;
+    height: auto;
 
-      display: flex;
-      align-items: center;
-      text-align: center;
-      letter-spacing: 0.02em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
 
-      justify-content: center;
+  &-infoItem {
+    width: auto;
+    height: auto;
 
-      margin-bottom: 10px;
+    transition: ease-in-out all .2s;
 
-      color: $whiteColor;
-    }
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
 
-    >h5 {
-      width: 100%;
-      font-family: $textFont;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 14px;
-      letter-spacing: 0.02em;
+    margin-bottom: 3px;;
 
-      text-align: center;
+    color: $blackColor;
 
-      color: $whiteColor;
-    }
+    cursor: pointer;
+  }
+
+  &-infoItemSelected {
+    text-decoration: underline;
+  }
+
+  &-infoRight {
+    width: 436px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &-infoImg {
+    width: 100%;
+    height: 245px;
+  }
+
+  &-infoDetail {
+    width: 100%;
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+
+    text-align: center;
+
+    color: $blackColor;
+
+    padding: 15px 0;
   }
 
   &-contSofware{
@@ -346,7 +296,7 @@
 
   &-research {
     width: 100%;
-    height: 320px;
+    height: auto;
 
     margin-bottom: 130px;
 
@@ -358,82 +308,74 @@
     align-items: flex-start;
   }
 
-  &-researchLeft {
-    width: 316px;
-    height: 100%;
+  &-researchTitle {
+    width: auto;
+    height: auto;
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-content: center;
-    align-items: flex-start;
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 25px;
+
+    color: $blackColor;
   }
 
   &-data {
     width: 100%;
     height: auto;
 
+    margin-bottom: 20px;
+
     >h6 {
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+
+      color: $blackColor;
+
+      margin-bottom: 10px;
+    }
+
+    >a {
       font-family: $textFont;
       font-style: normal;
       font-weight: normal;
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 23px;
+      text-decoration-line: underline;
 
       color: $blackColor;
-
-      margin-top: 10px;
     }
 
-    >h4 {
-
-      margin-top: 40px;
+    >p{
       font-family: $textFont;
       font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 18px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 23px;
 
       color: $blackColor;
     }
   }
 
-  &-researchRight {
-    width: 395px;
+  &-researchList {
+    width: 344px;
     height: 100%;
 
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
     align-items: flex-start;
-
-    >h3 {
-      width: 160px;
-      height: 75px;
-
-      background-color: $blackColor;
-      color: $whiteColor;
-
-      font-family: $titleFont;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 24px;
-      line-height: 25px;
-      /* or 104% */
-
-      display: flex;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-    }
   }
 
   &-researchImg {
-    height: 100%;
-    width: 235px;
+    width: 217px;
+    height: 259px;
 
     background-size: cover;
     background-position: center;

@@ -8,11 +8,13 @@ class ProjectStore {
 
     arrayProjects = [
         {
+            slides: [0, 1, 2],
             order: 1,
             id: 0,
-            name: 'Raven',
-            type: 'default',
-            goal: 'Evaluate the effects of sound, tactile and visual stimuli in gamified learning environments.',
+            subtitle: 'Raven',
+            title: 'Title',
+            type: 'project',
+            role: 'Evaluate the effects of sound, tactile and visual stimuli in gamified learning environments.',
             about: "An application for learning Japanese (Kanji) was developed, in which different Kanji were projected that the user should follow according to the system he was questioning. In the memorization process, the platform sent visual, sound and tactile stimuli to guide the user, before a final test without guides.",
             topics: [
                 {
@@ -29,13 +31,24 @@ class ProjectStore {
             behance: "https://www.behance.net/gallery/73144851/Raven",
             git: null,
             test: null,
-            build: [8, 10, 11, 18]
+            teammates: [{
+                name: "Teammate 1",
+                route: "https://www.instagram.com/santiagortizgue"
+            },{
+                name: "Teammate 2",
+                route: "https://www.instagram.com/santiagortizgue"
+            },{
+                name: "Teammate 3",
+                route: "https://www.instagram.com/santiagortizgue"
+            }]
         }, {
+            slides: [0, 1, 2],
             order: 0,
             id: 1,
-            name: 'Vibo',
-            type: 'default',
-            goal: 'For the course "Proyecto Integrador ll" we were asked for a solution that simplifies the collection, analysis and visualization of data in a newsroom or in a research environment.',
+            subtitle: 'Vibo',
+            title: 'Title',
+            type: 'project',
+            role: 'For the course "Proyecto Integrador ll" we were asked for a solution that simplifies the collection, analysis and visualization of data in a newsroom or in a research environment.',
             about: "Vibo is a platform that allows improving information management for journalists, researchers or editors. In addition, it allows data visualization of these investigations.",
             topics: [
                 {
@@ -52,13 +65,24 @@ class ProjectStore {
             behance: "https://www.behance.net/gallery/88983583/Vibo",
             git: "https://github.com/PIntegrador/nm-app",
             test: null,
-            build: [5, 6, 7, 12, 20]
+            teammates: [{
+                name: "Teammate 1",
+                route: "https://www.instagram.com/santiagortizgue"
+            },{
+                name: "Teammate 2",
+                route: "https://www.instagram.com/santiagortizgue"
+            },{
+                name: "Teammate 3",
+                route: "https://www.instagram.com/santiagortizgue"
+            }]
         }, {
+            slides: [0, 1, 2],
             order: 2,
             id: 2,
-            name: 'Mingu',
-            type: 'default',
-            goal: 'Presenting Mingu, a network connected app that try to make easier a conversation for people, through a collaborative game experience.',
+            subtitle: 'Mingu',
+            title: 'Title',
+            type: 'freestyle',
+            role: 'Presenting Mingu, a network connected app that try to make easier a conversation for people, through a collaborative game experience.',
             about: "A web app and a mobile app throughout the rethinking of the classic charades game is made.",
             topics: [
                 {
@@ -75,60 +99,35 @@ class ProjectStore {
             behance: "https://www.behance.net/gallery/88987115/Mingu",
             git: null,
             test: null,
-            build: [8, 10, 11, 18]
-        },{
-        order: 3,
-        id: 3,
-        name: 'LOGON',
-        type: 'coming',
-        goal: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        topics: [
-            {
-                name: "Topic 1",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-            }, {
-                name: "Topic 2",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-            }, {
-                name: "Topic 3",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-            }
-        ],
-        behance: "",
-        git: "https://github.com/SantiagoOrtiz0630/final-sti",
-        test: "https://dashboard.heroku.com/apps/final-sti",
-        build: [4, 5, 12, 20]
-        },{
-    order: 4,
-    id: 4,
-    name: 'InnReality',
-    type: 'coming',
-    goal: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    topics: [
-        {
-            name: "Topic 1",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-        }, {
-            name: "Topic 2",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-        }, {
-            name: "Topic 3",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-        }
-    ],
-    behance: "",
-    git: "",
-    test: "",
-    build: []
-}];
+            teammates: [{
+                name: "Teammate 1",
+                route: "https://www.instagram.com/santiagortizgue"
+            },{
+                name: "Teammate 2",
+                route: "https://www.instagram.com/santiagortizgue"
+            },{
+                name: "Teammate 3",
+                route: "https://www.instagram.com/santiagortizgue"
+            }]
+        }];
 
     getProjectById(index) {
         let project = this.arrayProjects.find(elem => elem.id === index);
         //console.log(project);
         return project;
     }
+
+    arrayResearch = [{
+        id: 0,
+        year: "2018 - 2019",
+        name: "Audio-tactile priming to guide information recall in edutainment",
+        link: "https://ieeexplore.ieee.org/document/9212866"
+    },{
+        id: 1,
+        year: "2019",
+        name: "Thesis (In coming)",
+        link: null
+    }];
 }
 
 function sortByOrder(a, b){
@@ -137,6 +136,7 @@ function sortByOrder(a, b){
 
 decorate(ProjectStore, {
     arrayProjects: observable,
+    arrayResearch: observable,
     getProjectById: action,
     sortArrayProjects: action
 });

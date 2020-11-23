@@ -5,7 +5,6 @@ import './Projects.scss';
 import Store from '../../utils/stores/Stores';
 import { observer } from 'mobx-react-lite';
 import ProjectCard from '../ProjectCard/ProjectCard';
-import ComingCard from '../ComingCard/ComingCard';
 
 const Projects = () => {
 
@@ -21,23 +20,39 @@ const Projects = () => {
   return (
     <div className="Projects">
 
-      <div className="Projects-containter">
-        {stores.projectStore.arrayProjects.map((elem, index) => {
-          return (
-            (elem.type === "coming") ?
-              <Fade key={index} timeout={1250} delay={index * 350}>
-                <ComingCard project={elem} />
-              </Fade> :
-              <Fade key={index} timeout={1250} delay={index * 350}>
-                <ProjectCard project={elem} />
-              </Fade>)
-        }
-        )}
-        <Fade timeout={1250} delay={1000} bottom>
-          <div className="Projects-moreProjects">
-            <h3>Coming soon!</h3>
-          </div>
-        </Fade>
+      <div className="Projects-projects">
+        <h1 className="Projects-projectsLeft">
+          Projects
+        </h1>
+
+        <div className="Projects-projectsRight">
+          {stores.projectStore.arrayProjects.map((elem, index) => {
+            return (
+              (elem.type === "project") ?
+                <Fade key={index} timeout={1250} delay={index * 350}>
+                  <ProjectCard project={elem} />
+                </Fade> : '')
+          }
+          )}
+        </div>
+      </div>
+
+      <div className="Projects-freestyle">
+
+        <h1 className="Projects-freestyleLeft">
+          Freestyle
+        </h1>
+
+        <div className="Projects-freestyleRight">
+          {stores.projectStore.arrayProjects.map((elem, index) => {
+            return (
+              (elem.type === "freestyle") ?
+                <Fade key={index} timeout={1250} delay={index * 350}>
+                  <ProjectCard project={elem} />
+                </Fade> : '')
+          }
+          )}
+        </div>
       </div>
 
       <footer className="footer">

@@ -1,14 +1,15 @@
-
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Slab:100,300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 $blackColor: #232323;
 $whiteColor: #FDFDFE;
 $mainColor: #ED274A;
 $grayColor: #C4C4C4;
 
-$titleFont: 'Raleway', sans-serif;
-$textFont: 'Roboto Slab', serif;
+$titleFont: 'Merriweather', serif;
+$textFont: 'Heebo', sans-serif;
 
-$widthSize: 780px;
+$widthSize-720: 780px;
+$widthSize-1080: 780px;
+$widthSize-1440: 780px;
 
-$sizeProjectCard: 260px;
+$sizeProjectCard: 305px;

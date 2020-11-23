@@ -1,0 +1,82 @@
+@import './public/variables.scss';
+
+.NavigationButton{
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+    transition: .2 ease-in-out all;
+
+    &:hover{
+
+        .NavigationButton{
+
+            &-left{
+        
+                margin-right: 20px;
+            }
+        
+            &-right{
+        
+                margin-left: 20px;
+            }
+
+        }
+
+    }
+
+    &-left{
+        transition: .2 ease-in-out all;
+
+        width: 18px;
+        height: 13px;
+
+        flex-shrink: 0;
+
+        margin-right: 10px;
+
+        >path{
+            stroke: $blackColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    }
+
+    &-right{
+        transition: .2 ease-in-out all;
+
+        width: 18px;
+        height: 13px;
+
+        flex-shrink: 0;
+
+        margin-left: 10px;
+
+        >path{
+            stroke: $blackColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    }
+
+    >h3{
+        font-family: $textFont;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 140%;
+
+        display: flex;
+        align-items: center;
+
+        color: $blackColor;
+    }
+}
