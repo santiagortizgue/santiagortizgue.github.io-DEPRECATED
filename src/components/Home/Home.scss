@@ -14,6 +14,10 @@
 
   padding-bottom: 40px;
 
+  @include breakpoint(large_desktop){
+    width: $widthSize-1080;
+  }
+
   /***Top***/
 
   &-top {
@@ -30,6 +34,10 @@
     margin-bottom: 150px;
 
     flex-shrink: 0;
+    
+    @include breakpoint(large_desktop){
+      margin-bottom: 320px;
+    }
   }
 
   &-img {
@@ -44,6 +52,13 @@
     background-position: center;
 
     margin-bottom: 33px;
+
+    @include breakpoint(large_desktop){
+      width: 466px;
+      height: 634px;
+
+      margin-bottom: 45px;
+    }
 
     >svg {
       width: 14px;
@@ -68,6 +83,10 @@
     width: 355px;
     height: auto;
 
+    @include breakpoint(large_desktop){
+      width: 426px;
+    }
+
     >h3 {
       width: 100%;
       text-align: center;
@@ -76,11 +95,15 @@
       font-style: normal;
       font-weight: 900;
       font-size: 36px;
-      line-height: 36px;
+      line-height: 120%;
 
       color: $blackColor;
 
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+
+      @include breakpoint(large_desktop){
+        font-size: 42px;
+      }
     }
 
     >h4 {
@@ -90,10 +113,14 @@
       font-style: normal;
       font-weight: normal;
       font-size: 20px;
-      line-height: 23px;
+      line-height: 120%;
       text-align: center;
 
       color: $blackColor;
+
+      @include breakpoint(large_desktop){
+        font-size: 26px;
+      }
     }
   }
 
@@ -117,11 +144,20 @@
     flex-shrink: 0;
 
     margin-bottom: 150px;
+
+    
+    @include breakpoint(large_desktop){
+      margin-bottom: 210px;
+    }
   }
 
   &-whatLeft {
     width: 160px;
     height: auto;
+
+    @include breakpoint(large_desktop){
+      width: 203px;
+    }
 
     >h3 {
       width: 100%;
@@ -141,6 +177,10 @@
       color: $blackColor;
 
       text-align: right;
+
+      @include breakpoint(large_desktop){
+        font-size: 36px;
+      }
     }
   }
 
@@ -161,6 +201,10 @@
     height: auto;
 
     margin-right: 30px;
+
+    @include breakpoint(large_desktop){
+      width: 315px;
+    }
   }
 
   &-other{
@@ -168,6 +212,10 @@
     height: auto;
 
     margin-right: 100px;
+
+    @include breakpoint(large_desktop){
+      width: 315px;
+    }
   }
 
   &-whatTitle{
@@ -180,6 +228,11 @@
     line-height: 120%;
 
     margin-bottom: 16px;
+
+    @include breakpoint(large_desktop){
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
   }
 
   &-whatText{
@@ -192,6 +245,12 @@
     line-height: 120%;
 
     margin-bottom: 3px;
+
+    
+    @include breakpoint(large_desktop){
+      margin-bottom: 5px;
+      font-size: 22px;
+    }
   }
 
   /***Recent***/
@@ -208,6 +267,11 @@
     justify-content: space-between;
     align-content: center;
     align-items: flex-start;
+
+    
+    @include breakpoint(large_desktop){
+      margin-bottom: 210px;
+    }
   }
 
   &-leftRecent {
@@ -279,6 +343,12 @@
     justify-content: flex-start;
     align-content: center;
     align-items: flex-start;
+
+    
+    @include breakpoint(large_desktop){
+      margin-bottom: 210px;
+      height: 608px;
+    }
   }
 
   &-leftContact {
@@ -290,13 +360,17 @@
     justify-content: flex-start;
     align-content: flex-end;
     align-items: flex-end;
+    
+    @include breakpoint(large_desktop){
+      width: 650px;
+    }
 
     >h5 {
       font-family: $titleFont;
       font-style: normal;
       font-weight: normal;
       font-size: 20px;
-      line-height: 26px;
+      line-height: 120%;
       display: flex;
       align-items: center;
       text-align: right;
@@ -308,6 +382,11 @@
       color: $blackColor;
 
       margin-right: 36px;
+
+      
+      @include breakpoint(large_desktop){
+        font-size: 22px;
+      }
 
       >strong {
         color: $mainColor;
@@ -322,7 +401,7 @@
       font-style: normal;
       font-weight: 900;
       font-size: 32px;
-      line-height: 38px;
+      line-height: 120%;
       display: flex;
       align-items: flex-end;
       text-align: right;
@@ -332,6 +411,11 @@
       /* Black */
 
       color: $blackColor;
+
+      @include breakpoint(large_desktop){
+      font-size: 34px;
+      }
+      
     }
   }
 
@@ -345,6 +429,13 @@
     background-position: center;
 
     flex-shrink: 0;
+
+    
+    @include breakpoint(large_desktop){
+      height: 394px;
+      margin-bottom: 130px;
+    }
+
   }
 
   &-rightContact {

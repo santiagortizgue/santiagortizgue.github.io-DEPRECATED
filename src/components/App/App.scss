@@ -9,6 +9,7 @@
 
 body {
   background-color: $whiteColor;
+  width: 100%;
 
   /*Scroll bar not visible*/
   &::-webkit-scrollbar {
