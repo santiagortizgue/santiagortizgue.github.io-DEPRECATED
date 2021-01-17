@@ -39,11 +39,13 @@
         flex-shrink: 0;
 
         >h3{
+            width: auto;
+            height: auto;
             font-family: $titleFont;
             font-style: normal;
             font-weight: bold;
             font-size: 36px;
-            line-height: 120%;
+            line-height: 100%;
         }
 
     }
