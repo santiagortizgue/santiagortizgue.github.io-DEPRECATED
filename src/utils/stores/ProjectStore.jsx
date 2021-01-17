@@ -3,118 +3,147 @@ import { decorate, observable, action } from 'mobx';
 class ProjectStore {
 
     sortArrayProjects(){
-        this.arrayProjects = this.arrayProjects.slice().sort(sortByOrder);
+        this.arrayProjects = this.arrayProjects.slice().sort(sortByYear);
+        this.arrayConcepts = this.arrayConcepts.slice().sort(sortByYear);
     }
 
     arrayProjects = [
         {
-            slides: [0, 1, 2],
-            order: 1,
+            slides: [0, 1],
+            e_logo: null,
+            year: 2018,
             id: 0,
             subtitle: 'Raven',
-            title: 'Title',
+            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
             type: 'project',
-            role: 'Evaluate the effects of sound, tactile and visual stimuli in gamified learning environments.',
-            about: "An application for learning Japanese (Kanji) was developed, in which different Kanji were projected that the user should follow according to the system he was questioning. In the memorization process, the platform sent visual, sound and tactile stimuli to guide the user, before a final test without guides.",
+            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+            about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             topics: [
                 {
-                    name: "Make a decision",
-                    text: "The stimuli within the platform will help you choose the right Kanji, to keep your way in the forest."
+                    name: "Topic 1",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 }, {
-                    name: "Users tested it",
-                    text: "Experience shows that users are more influenced by visual and sound stimuli."
+                    name: "Topic 2",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 }, {
-                    name: "Research",
-                    text: "Audio-tactile priming to guide information recall in edutainment (2019)."
+                    name: "Topic 3",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 }
             ],
             behance: "https://www.behance.net/gallery/73144851/Raven",
             git: null,
-            test: null,
+            test: 'https://ieeexplore.ieee.org/document/9212866',
             teammates: [{
-                name: "Teammate 1",
-                route: "https://www.instagram.com/santiagortizgue"
+                name: "Valentina Moreno",
+                route: "https://www.instagram.com/soymore___"
             },{
-                name: "Teammate 2",
-                route: "https://www.instagram.com/santiagortizgue"
+                name: "Sebastián Restrepo",
+                route: "https://www.instagram.com/seb.rq"
             },{
-                name: "Teammate 3",
-                route: "https://www.instagram.com/santiagortizgue"
+                name: "Nicolás Martinez",
+                route: "https://www.instagram.com/nicolas26982"
             }]
         }, {
             slides: [0, 1, 2],
-            order: 0,
+            e_logo: null,
+            year: 2019,
             id: 1,
             subtitle: 'Vibo',
-            title: 'Title',
+            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
             type: 'project',
-            role: 'For the course "Proyecto Integrador ll" we were asked for a solution that simplifies the collection, analysis and visualization of data in a newsroom or in a research environment.',
-            about: "Vibo is a platform that allows improving information management for journalists, researchers or editors. In addition, it allows data visualization of these investigations.",
+            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+            about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             topics: [
                 {
-                    name: "Organize",
-                    text: "Always keep control of your resources (projects, folders, files). Vibo offers you an easy system of organization and search."
+                    name: "Topic 1",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 }, {
-                    name: "Share",
-                    text: "Add collaborators to the different projects you require, and you can even assign specific tasks to managers."
+                    name: "Topic 2",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 }, {
-                    name: "Chat",
-                    text: "Communicate quickly with your work team at any time."
+                    name: "Topic 3",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 }
             ],
             behance: "https://www.behance.net/gallery/88983583/Vibo",
             git: "https://github.com/PIntegrador/nm-app",
             test: null,
-            teammates: [{
-                name: "Teammate 1",
-                route: "https://www.instagram.com/santiagortizgue"
-            },{
-                name: "Teammate 2",
-                route: "https://www.instagram.com/santiagortizgue"
-            },{
-                name: "Teammate 3",
-                route: "https://www.instagram.com/santiagortizgue"
-            }]
+            teammates: null
         }, {
-            slides: [0, 1, 2],
-            order: 2,
+            slides: [0, 1],
+            e_logo: null,
+            year: 2018,
             id: 2,
             subtitle: 'Mingu',
-            title: 'Title',
-            type: 'freestyle',
-            role: 'Presenting Mingu, a network connected app that try to make easier a conversation for people, through a collaborative game experience.',
-            about: "A web app and a mobile app throughout the rethinking of the classic charades game is made.",
+            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+            type: 'project',
+            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+            about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             topics: [
                 {
-                    name: "New Charades!",
-                    text: "This app was created thinking that today millennials give preference to the development of virtual experiences over those given in the real world, generating that they neglect their close social environment, that is, that they move away from the people around them."
+                    name: "Topic 1",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 }, {
                     name: "Topic 2",
-                    text: "And taking into account, that some of the most important people for them and with whom they have the greatest contact are their friends."
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 }, {
-                    name: "People Love it!",
-                    text: "The solution system generates a positive experience in the individuals, it is perceived as nice and funny."
+                    name: "Topic 3",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 }
             ],
             behance: "https://www.behance.net/gallery/88987115/Mingu",
             git: null,
             test: null,
             teammates: [{
-                name: "Teammate 1",
-                route: "https://www.instagram.com/santiagortizgue"
+                name: "Estefanía Montaña",
+                route: "https://www.instagram.com/emonbui"
             },{
-                name: "Teammate 2",
-                route: "https://www.instagram.com/santiagortizgue"
-            },{
-                name: "Teammate 3",
-                route: "https://www.instagram.com/santiagortizgue"
+                name: "Cristian Rodriguez",
+                route: "https://www.instagram.com/candiescense"
             }]
+        }, {
+            slides: [0, 1, 2, 3, 4],
+            e_logo: {
+                url: 'https://weareangular.com',
+                logo: 'angular.svg'
+            },
+            year: 2020,
+            id: 3,
+            subtitle: 'Aurora',
+            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+            type: 'project',
+            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+            about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            topics: [
+                {
+                    name: "Topic 1",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }, {
+                    name: "Topic 2",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }, {
+                    name: "Topic 3",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ],
+            behance: null,
+            git: null,
+            test: "https://somosaurora.co",
+            teammates: null
         }];
 
     getProjectById(index) {
         let project = this.arrayProjects.find(elem => elem.id === index);
         //console.log(project);
         return project;
+    }
+
+    arrayConcepts = [];
+
+    getConceptsById(index){
+        let concept = this.arrayConcepts.find(elem => elem.id === index);
+        //console.log(concept);
+        return concept;
     }
 
     arrayResearch = [{
@@ -130,14 +159,16 @@ class ProjectStore {
     }];
 }
 
-function sortByOrder(a, b){
-    return a.order - b.order;
+function sortByYear(a, b){
+    return b.year - a.year;
 }
 
 decorate(ProjectStore, {
     arrayProjects: observable,
+    arrayConcepts: observable,
     arrayResearch: observable,
     getProjectById: action,
+    getConceptsById: action,
     sortArrayProjects: action
 });
 

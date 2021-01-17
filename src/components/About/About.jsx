@@ -18,7 +18,7 @@ const About = () => {
   function changeRightInfoHandler(value) {
     return (
         <div className="About-infoRight">
-          <img className="About-infoImg" src={`${value.img}`} alt="Imagen" />
+          <img className="About-infoImg" src={`./img/about/${value.id}.png`} alt="skills and photos" />
           <h5 className="About-infoDetail">{value.data}</h5>
         </div>
     )
@@ -30,7 +30,7 @@ const About = () => {
       <div className="About-top">
         <div className="About-topLeft">
 
-          <Fade timeout={1000} left>
+          <Fade timeout={750} left>
             <div style={{ backgroundImage: "url('./img/about.jpg')" }} className="About-img">
               <div className="About-name">
                 <h4>Santiago</h4>
@@ -39,7 +39,7 @@ const About = () => {
             </div>
           </Fade>
 
-          <Fade timeout={1000} delay={250} cascade>
+          <Fade timeout={750} delay={250} cascade>
             <div className="About-title">
               <h4>About me</h4>
               <h6>Bio</h6>
@@ -47,9 +47,9 @@ const About = () => {
           </Fade>
         </div>
 
-        <Fade timeout={2000} delay={350}>
+        <Fade timeout={1250} delay={350}>
           <div className="About-topRight">
-            <p>I’m Santiago, a 21 years old Colombian <strong>Product Designer</strong> from ICESI University. I’ve worked with <strong>user interface</strong>, <strong>user experience</strong> and <strong>development</strong> on multiple platforms.
+            <p>I’m Santiago, a 22 years old Colombian <strong>Product Designer</strong> from ICESI University. I’ve worked with <strong>user interface</strong>, <strong>user experience</strong> and <strong>development</strong> on multiple platforms.
               <br></br> <br></br> <br></br> My <strong>creativity</strong> allows me to build experiences and interfaces, based on human feelings and needs. I'm <strong>always learning</strong> new methodologies, software and strategies to develop these experiences.
             </p>
           </div>

@@ -15,9 +15,22 @@
     padding-top: 40px;
     padding-bottom: 40px;
 
-    &-header {
-        width: 445px;
+    &-top{
+        width: 100%;
         height: auto;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-top: 45px;
+    }
+
+    &-header {
+        width: 520px;
+        height: auto;
+
+        text-align: left;
 
         font-family: $titleFont;
         font-style: normal;
@@ -26,21 +39,67 @@
         line-height: 120%;
 
         color: $blackColor;
+    }
 
-        margin-top: 45px;
+    &-year{
+        width: auto;
+        height: auto;
+
+        font-family: $titleFont;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 120%;
+
+        text-align: right;
+
+        color: $blackColor;
     }
 
     &-coverContainer{
         margin-top: 54px;
         width: 100%;
+
         height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+    }
+
+    &-eLogo{
+        width: 637px;
+        height: 84px;
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-        align-content: flex-start;
-        align-items: flex-start;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+
+        >a{
+            text-decoration: none;
+
+            >img{
+                width: 70px;
+                height: 44px;
+            }
+        }
+
+        >h3{
+            font-family: $textFont;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 120%;
+
+            color: $blackColor;
+
+            margin-right: 15px;
+        }
     }
 
     &-cover{
@@ -68,8 +127,8 @@
             font-family: $titleFont;
             font-style: normal;
             font-weight: 800;
-            font-size: 36px;
-            line-height: 42px;
+            font-size: 28px;
+            line-height: 120%;
 
             color: $blackColor;
 
@@ -77,12 +136,12 @@
         }
 
         >p {
-            width: 452px;
+            width: 540px;
 
             font-family: $textFont;
             font-style: normal;
             font-weight: normal;
-            font-size: 14px;
+            font-size: 15px;
             line-height: 140%;
 
             color: $blackColor;
@@ -104,36 +163,46 @@
     }
 
     &-wireSmall{
-        width: 265px;
-        height: 284px;
+        width: 340px;
+        height: 435px;
 
         background-size: cover;
         background-position: center;
     }
 
     &-wireBig{
-        width: 505px;
-        height: 284px;
+        width: 520px;
+        height: 293px;
 
         background-size: cover;
         background-position: center;
     }
 
+    &-wireLeft{
+        width: 520px;
+        height: 435px;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+
     &-role {
         width: 100%;
-        height: auto;
-
-        margin-top: 90px;
+        height: calc(100% - 293px);
 
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-content: flex-start;
-        align-items: flex-start;
+        align-content: center;
+        align-items: center;
 
         >h3 {
-            width: 248px;
+            width: 120px;
 
             text-align: right;
 
@@ -144,11 +213,13 @@
             line-height: 120%;
 
             color: $blackColor;
+
+            margin-right: 27px;
         }
 
         >p {    
 
-            width: 505px;
+            width: 372px;
 
             font-family: $textFont;
             font-style: normal;
@@ -183,12 +254,13 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-content: flex-start;
         align-items: flex-start;
 
         >h3 {
-            width: 248px;
+            width: 250px;
+            height: auto;
 
             text-align: right;
 
@@ -199,11 +271,14 @@
             line-height: 120%;
 
             color: $blackColor;
+
+            margin-right: 20px;
         }
 
         >p {    
 
-            width: 505px;
+            width: 520px;
+            height: auto;
 
             font-family: $textFont;
             font-style: normal;
@@ -217,7 +292,7 @@
 
     &-slides{
         width: 100%;
-        height: 439px;
+        height: 494px;
 
         display: flex;
         flex-shrink: 0;
@@ -327,7 +402,7 @@
     }
 
     &-test {
-        width: 130px;
+        width: 90px;
         height: 45px;
 
         background-color: $blackColor;

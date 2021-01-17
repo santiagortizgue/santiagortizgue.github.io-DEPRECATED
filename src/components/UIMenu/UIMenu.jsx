@@ -11,10 +11,11 @@ import { observer } from 'mobx-react-lite';
 
 export const Logo = () => {
     return (
-        <Link className="Logo" to="/">
-            <svg viewBox="0 0 96 150" xmlns="http://www.w3.org/2000/svg">
-                <path d="M57.2756 8.09211L19.0918 46.2759L38.1837 65.3678L95.4593 8.09211C84.9152 -2.45204 67.8197 -2.45204 57.2756 8.09211Z"/>
-                <path d="M76.3675 65.3668L0 141.734C10.5442 152.279 27.6396 152.279 38.1838 141.734L95.4594 84.4587L76.3675 65.3668Z"/>
+        <Link className="Logo" to="/" onClick={()=>{
+            window.scrollTo(0, 0);}}>
+            <svg viewBox="0 0 96 172" fill="none">
+                <path d="M76.3674 -1.35303e-05L19.0918 57.2756L38.1837 76.3675L95.4593 19.0919L76.3674 -1.35303e-05Z"/>
+                <path d="M76.3675 76.3671L0 152.735L19.0919 171.827L95.4594 95.459L76.3675 76.3671Z"/>
             </svg>
         </Link>
     )
@@ -22,7 +23,7 @@ export const Logo = () => {
 
 export const MenuSocialMedia = () => {
     return (
-        <Fade collapse timeout={1500} left>
+        <Fade collapse timeout={1000} left>
             <div className="MenuSocialMedia">
                 <a target='_blank' rel='noopener noreferrer' href="https://www.behance.net/santiagortizgue">
                     <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +67,7 @@ export const Menu = observer(() => {
     function displayMenu() {
         if (stores.uiStore.displayMenu) {
             return (
-                <Fade collapse timeout={750}>
+                <Fade collapse timeout={1000}>
                     <div className="Menu-container">
                         {stores.uiStore.arrayLink.map((link) => {
                             let stringClass = (stores.uiStore.actualLink === link.id) ? "Menu-item Menu-itemSelected" : "Menu-item";
@@ -88,7 +89,7 @@ export const Menu = observer(() => {
     }
 
     return (
-        <Fade collapse timeout={1500} right>
+        <Fade collapse timeout={1000} right>
             <div className="Menu" onMouseOver={handleHover} onMouseLeave={handleLeave}>
                 {displayMenu()}
             </div>
@@ -99,7 +100,7 @@ export const Menu = observer(() => {
 export const Message = () => {
 
     return (
-        <Fade collapse timeout={1500} right>
+        <Fade collapse timeout={1000} right>
             <a href="mailto:sdot.about@gmail.com" className="Message">
                 <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" clipRule="evenodd" d="M2.74999 2.75H19.25C20.2625 2.75 21.0833 3.57081 21.0833 4.58333V17.4167C21.0833 18.4292 20.2625 19.25 19.25 19.25H2.74999C1.73747 19.25 0.916656 18.4292 0.916656 17.4167V4.58333C0.916656 3.57081 1.73747 2.75 2.74999 2.75ZM2.74999 8.8166V17.4167H19.25V8.81699L11 12.942L2.74999 8.8166ZM2.74999 6.76683L11 10.8923L19.25 6.76726V4.58333H2.74999V6.76683Z" />
@@ -121,7 +122,7 @@ export const ScrollIcon = () => {
       };
 
     return (
-        <Fade collapse timeout={1750} right>
+        <Fade collapse timeout={1000} right>
             <div className="ScrollAnimation" >
                 <Lottie options={options}/>
             </div>

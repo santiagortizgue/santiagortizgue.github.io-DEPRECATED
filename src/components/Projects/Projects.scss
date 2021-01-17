@@ -33,13 +33,8 @@
 
   &-projectsLeft{
 
-    width: 151px;
+    width: 160px;
     height: auto;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
 
       font-family: $titleFont;
       font-style: normal;
@@ -53,7 +48,7 @@
   }
 
   &-projectsRight {
-    width: 610px;
+    width: 662px;
     height: auto;
 
     display: flex;
@@ -64,7 +59,7 @@
     align-items: flex-start;
   }
 
-  &-freestyle{
+  &-concepts{
     width: 100%;
     height: auto;
 
@@ -78,15 +73,10 @@
     margin-bottom: 120px;
   }
 
-  &-freestyleLeft{
+  &-conceptsLeft{
     
-    width: 151px;
+    width: 160px;
     height: auto;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
 
       font-family: $titleFont;
       font-style: normal;
@@ -99,8 +89,8 @@
       text-align: right;
   }
 
-  &-freestyleRight {
-    width: 610px;
+  &-conceptsRight {
+    width: 662px;
     height: auto;
 
     display: flex;
@@ -109,6 +99,22 @@
     justify-content: flex-start;
     align-content: center;
     align-items: flex-start;
+
+    >h3{
+
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 120%;
+
+      color: $whiteColor;
+      background-color: $blackColor;
+
+      text-align: center;
+
+      padding: 15px;
+    }
   }
 
   /** Footer **/

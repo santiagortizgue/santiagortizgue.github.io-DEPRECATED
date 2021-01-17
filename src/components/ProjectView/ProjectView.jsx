@@ -25,15 +25,33 @@ const ProjectView = (props) => {
 
             <NavigationButton text={"Back to projects"} route={"/projects"} type={"left"} />
 
-            <Fade timeout={750} left>
-                <h1 className="ProjectView-header">
-                    {data.title}
-                </h1>
-            </Fade>
+            <div className="ProjectView-top">
+                <Fade timeout={750} left>
+                    <h1 className="ProjectView-header">
+                        {data.title}
+                    </h1>
+                </Fade>
 
-            <Fade timeout={1500} delay={250}>
+                <Fade timeout={750} right delay={250}>
+                    <h1 className="ProjectView-year">
+                        {data.year}
+                    </h1>
+                </Fade>
+            </div>
+
+            <Fade timeout={750} delay={500}>
                 <div className="ProjectView-coverContainer">
                     <div className="ProjectView-cover" style={{ backgroundImage: `url(./img/projects/${data.id}/header.png)` }} ></div>
+                
+                    {data.e_logo ? 
+                        <div className="ProjectView-eLogo">
+                            <h3>Made working for</h3>
+                            <a target='_blank' rel='noopener noreferrer' href={data.e_logo.url} >
+                                <img src={`./img/logos/${data.e_logo.logo}`} alt="logo"/>
+                            </a>
+                        </div>
+                    : ''}
+                
                 </div>
             </Fade>
 
@@ -46,49 +64,51 @@ const ProjectView = (props) => {
 
             <div className="ProjectView-wireframes">
                 <Fade timeout={750} left>
-                    <div className="ProjectView-wireSmall" style={{ backgroundImage: `url(./img/projects/${data.id}/context.png)` }}></div>
+                    <div className="ProjectView-wireSmall" style={{ backgroundImage: `url(./img/projects/${data.id}/mid_left.png)` }}></div>
                 </Fade>
 
                 <Fade timeout={750} right>
-                    <div className="ProjectView-wireBig" style={{ backgroundImage: `url(./img/projects/${data.id}/context.png)` }}></div>
+                    <div className="ProjectView-wireLeft">
+
+                        <div className="ProjectView-wireBig" style={{ backgroundImage: `url(./img/projects/${data.id}/mid_right.png)` }}></div>
+
+                        <div className="ProjectView-role">
+                            <h3>Role</h3>
+                            <p>{data.role}</p>
+                        </div>
+
+                    </div>
                 </Fade>
             </div>
 
-            <Fade timeout={750} bottom>
-                <div className="ProjectView-role">
-                    <h3>Role</h3>
-                    <p>{data.role}</p>
-                </div>
-            </Fade>
-
-            <Fade timeout={750} bottom>
                 <div className="ProjectView-topicContainer">
 
                     {data.topics.map((elem, index) => {
                         return (
-                            <div key={index} className="ProjectView-topic">
-                                <h3>{elem.name}</h3>
-                                <p>{elem.text}</p>
-                            </div>
+                            <Fade  key={index}  timeout={350} bottom>
+                                <div className="ProjectView-topic">
+                                    <h3>{elem.name}</h3>
+                                    <p>{elem.text}</p>
+                                </div>
+                            </Fade>
                         )
                     })}
 
                 </div>
+
+            <Fade timeout={1000}>
+                <div className="ProjectView-slides">
+                    <Swiper slides={data.slides} route={`./img/projects/${data.id}`} />
+                </div>
             </Fade>
 
-            <Fade timeout={750} delay={250}>
-                    <div className="ProjectView-slides">
-                        <Swiper slides={data.slides} route={`./img/projects/${data.id}`} />
-                    </div>
-            </Fade>
-
-            <Fade timeout={500} delay={250}>
+            <Fade timeout={750} bottom>
                 <div className="ProjectView-options">
 
                     <div className="ProjectView-moreContainer">
 
                         <h3 className="ProjectView-moreTitle">
-                            You want to know more?
+                            Want to know more?
                         </h3>
 
                         <div className="ProjectView-contButtons">
@@ -106,12 +126,12 @@ const ProjectView = (props) => {
                                 </a> : ''}
 
                             {(data.test != null) ?
-                                <a target='_blank' rel='noopener noreferrer' className="ProjectView-test" href={data.test}>Test Prototype</a>
+                                <a target='_blank' rel='noopener noreferrer' className="ProjectView-test" href={data.test}>Visit site</a>
                                 : ''}
                         </div>
                     </div>
 
-
+                    {data.teammates ?
                     <div className="ProjectView-teammates">
                         <h3>Teammates</h3>
                         <div className="ProjectView-contTeammates">
@@ -122,6 +142,8 @@ const ProjectView = (props) => {
                             })}
                         </div>
                     </div>
+                     : ''}
+                    
 
                 </div>
             </Fade>

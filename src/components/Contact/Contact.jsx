@@ -21,14 +21,14 @@ const Contact = () => {
       <div className="Contact-contact">
         <div className="Contact-leftContact">
 
-          <Fade timeout={1000} left>
+          <Fade timeout={750} left>
             <div style={{ backgroundImage: "url('./img/ContactImg.png')" }} className="Home-contactImg"></div>
           </Fade>
-          <Fade timeout={1000} delay={50} bottom>
+          <Fade timeout={750} delay={50} bottom>
             <h5>Let’s <strong> work </strong> together!</h5>
           </Fade>
-          <Fade timeout={1500} delay={350} bottom>
-            <h3>sdot.about@gmail.com</h3>
+          <Fade timeout={750} delay={350} bottom>
+            <h3>{stores.uiStore.email}</h3>
           </Fade>
         </div>
         <div className="Contact-rightContact">

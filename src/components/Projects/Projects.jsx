@@ -26,30 +26,32 @@ const Projects = () => {
         </h1>
 
         <div className="Projects-projectsRight">
-          {stores.projectStore.arrayProjects.map((elem, index) => {
+          {
+          stores.projectStore.arrayProjects.map((elem, index) => {
             return (
-              (elem.type === "project") ?
-                <Fade key={index} timeout={1250} delay={index * 350}>
+                <Fade key={index} timeout={750} delay={index * 350}>
                   <ProjectCard project={elem} />
-                </Fade> : '')
+                </Fade>)
           }
           )}
         </div>
       </div>
 
-      <div className="Projects-freestyle">
+      <div className="Projects-concepts">
 
-        <h1 className="Projects-freestyleLeft">
-          Freestyle
+        <h1 className="Projects-conceptsLeft">
+          Concepts
         </h1>
 
-        <div className="Projects-freestyleRight">
-          {stores.projectStore.arrayProjects.map((elem, index) => {
+        <div className="Projects-conceptsRight">
+          
+          {stores.projectStore.arrayConcepts.length === 0 ? <h3>Coming soon</h3> : ''}
+
+          {stores.projectStore.arrayConcepts.map((elem, index) => {
             return (
-              (elem.type === "freestyle") ?
-                <Fade key={index} timeout={1250} delay={index * 350}>
-                  <ProjectCard project={elem} />
-                </Fade> : '')
+                <Fade key={index} timeout={750} delay={index * 350}>
+                  <div>Concept</div>
+                </Fade>)
           }
           )}
         </div>
