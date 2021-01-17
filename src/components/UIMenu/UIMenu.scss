@@ -4,12 +4,17 @@
 .Logo {
   width: 22px;
   height: 35px;
-  
+
   position: fixed;
   top: $paddingSize;
   left: $paddingSize;
 
-  >svg{
+  @include breakpoint(large_desktop) {
+    width: 28px;
+    height: 50px;
+  }
+
+  >svg {
     width: 100%;
     height: 100%;
 
@@ -17,7 +22,7 @@
       fill: $blackColor;
       transition: ease-in-out all .2s;
     }
-  
+
     &:hover {
       >path {
         fill: $mainColor;
@@ -36,14 +41,20 @@
     width: 20px;
     height: 18px;
 
+
+    @include breakpoint(large_desktop) {
+      width: 27px;
+      height: 23px;
+    }
+
     >path {
       fill: $blackColor;
     }
   }
 
   &-container {
-    width: 50px;
-    height: 95px;
+    width: auto;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -57,43 +68,51 @@
     font-family: $textFont;
     font-weight: 700;
     font-size: 13px;
-    line-height: 17px;
+    line-height: 120%;
     text-align: right;
     color: $blackColor;
 
+    margin-bottom: 10px;
+
+
+    @include breakpoint(large_desktop) {
+      font-size: 18px;
+      line-height: 120%;
+    }
+
     transition: ease-in-out all .2s;
 
-    &:hover{
+    &:hover {
       color: $mainColor;
 
-      &::after{
+      &::after {
         background-color: $mainColor;
       }
     }
   }
 
-  &-itemSelected{
+  &-itemSelected {
     position: relative;
 
-    &::after{
-     content: '';
-     width: 5px;
-     height: 5px;
-     border-radius: 5px;
-     background-color: $blackColor; 
-     display: flex;
-     flex-shrink: 0;
+    &::after {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 5px;
+      background-color: $blackColor;
+      display: flex;
+      flex-shrink: 0;
 
-     position: absolute;
-     right: -10px;
-     bottom: 4.5px;
+      position: absolute;
+      right: -10px;
+      bottom: 4.5px;
     }
   }
 }
 
 .MenuSocialMedia {
-  width: 20px;
-  height: 140px;
+  width: auto;
+  height: auto;
 
   position: fixed;
   bottom: $paddingSize;
@@ -109,6 +128,14 @@
   >a {
     width: 20px;
     height: 20px;
+
+    margin-top: 20px;
+
+    @include breakpoint(large_desktop) {
+      width: 24px;
+      height: 24px;
+      margin-top: 24px;
+    }
 
     >svg {
       width: 100%;
@@ -148,27 +175,32 @@
 
   cursor: pointer;
 
+  @include breakpoint(large_desktop) {
+    width: 55px;
+    height: 55px;
+  }
+
   >svg {
-      width: 22px;
-      height: 22px;
+    width: 50%;
+    height: 50%;
 
-      transition: ease-in-out all .2s;
+    transition: ease-in-out all .2s;
 
-      >path {
-          fill: $whiteColor;
-      }
+    >path {
+      fill: $whiteColor;
+    }
   }
 
   &:hover {
 
-      >svg {
-          width: 27px;
-          height: 27px;
-      }
+    >svg {
+      width: 27px;
+      height: 27px;
+    }
   }
 }
 
-.ScrollAnimation{
+.ScrollAnimation {
   width: 45px;
   height: 45px;
 
@@ -176,4 +208,11 @@
 
   bottom: 40px;
   right: 100px;
+  
+  @include breakpoint(large_desktop) {
+    width: 55px;
+    height: 55px;
+
+    right: 110px;
+  }
 }

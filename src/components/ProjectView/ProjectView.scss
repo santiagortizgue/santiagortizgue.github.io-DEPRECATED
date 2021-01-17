@@ -15,6 +15,10 @@
     padding-top: 40px;
     padding-bottom: 40px;
 
+    @include breakpoint(large_desktop){
+        width: $widthSize-1080;
+    }
+
     &-top{
         width: 100%;
         height: auto;
@@ -39,6 +43,11 @@
         line-height: 120%;
 
         color: $blackColor;
+
+        @include breakpoint(large_desktop){
+            width: 762px;
+            font-size: 36px;
+        }
     }
 
     &-year{
@@ -54,6 +63,10 @@
         text-align: right;
 
         color: $blackColor;
+
+        @include breakpoint(large_desktop){
+            font-size: 28px;
+        }
     }
 
     &-coverContainer{
@@ -67,6 +80,12 @@
         justify-content: flex-start;
         align-content: center;
         align-items: center;
+
+        
+        
+        @include breakpoint(large_desktop){
+            margin-top: 70px;
+        }
     }
 
     &-eLogo{
@@ -79,6 +98,11 @@
         justify-content: flex-end;
         align-content: center;
         align-items: center;
+
+        
+        @include breakpoint(large_desktop){
+            width: 989px;
+        }
 
         >a{
             text-decoration: none;
@@ -108,10 +132,16 @@
 
         background-size: cover;
         background-position: center;
+
+        
+        @include breakpoint(large_desktop){
+            width: 989px;
+            height: 554px;
+        }
     }
 
     &-about {
-        margin-top: 90px;
+        margin-top: 130px;
 
         width: 100%;
         height: auto;
@@ -133,6 +163,11 @@
             color: $blackColor;
 
             margin-bottom: 15px;
+
+            @include breakpoint(large_desktop){
+                font-size: 28px;
+                margin-bottom: 25px;
+            }
         }
 
         >p {
@@ -145,6 +180,11 @@
             line-height: 140%;
 
             color: $blackColor;
+
+            @include breakpoint(large_desktop){
+                width: 762px;
+                font-size: 18px;
+            }
         }
     }
 
@@ -152,7 +192,7 @@
         width: 100%;
         height: auto;
 
-        margin-top: 90px;
+        margin-top: 110px;
 
         display: flex;
         flex-direction: row;
@@ -168,14 +208,23 @@
 
         background-size: cover;
         background-position: center;
+
+        @include breakpoint(large_desktop){
+            width: 510px;
+            height: 652px;
+        }
     }
 
     &-wireBig{
-        width: 520px;
+        width: 100%;
         height: 293px;
 
         background-size: cover;
         background-position: center;
+
+        @include breakpoint(large_desktop){
+            height: 439px;
+        }
     }
 
     &-wireLeft{
@@ -188,6 +237,11 @@
         justify-content: flex-start;
         align-content: flex-start;
         align-items: flex-start;
+
+        @include breakpoint(large_desktop){
+            width: 780px;
+            height: 652px;
+        }
     }
 
     &-role {
@@ -200,6 +254,11 @@
         justify-content: space-between;
         align-content: center;
         align-items: center;
+
+        @include breakpoint(large_desktop){
+            height: calc(100% - 439px);
+        }
+        
 
         >h3 {
             width: 120px;
@@ -214,7 +273,12 @@
 
             color: $blackColor;
 
-            margin-right: 27px;
+            margin-right: 20px;
+
+            @include breakpoint(large_desktop){
+                width: 222px;
+                font-size: 35px;
+            }
         }
 
         >p {    
@@ -228,6 +292,11 @@
             line-height: 140%;
 
             color: $blackColor;
+            
+            @include breakpoint(large_desktop){
+                width: 538px;
+                font-size: 18px;
+            }
         }
     }
 
@@ -243,6 +312,10 @@
         justify-content: space-between;
         align-content: flex-start;
         align-items: flex-start;
+
+        @include breakpoint(large_desktop){
+            margin-top: 65px;
+        }
     }
 
     &-topic {
@@ -257,6 +330,10 @@
         justify-content: flex-end;
         align-content: flex-start;
         align-items: flex-start;
+
+        @include breakpoint(large_desktop){
+        margin-top: 45px;
+        }
 
         >h3 {
             width: 250px;
@@ -273,6 +350,11 @@
             color: $blackColor;
 
             margin-right: 20px;
+            
+            @include breakpoint(large_desktop){
+                width: 510px;
+                font-size: 35px;
+            }
         }
 
         >p {    
@@ -287,6 +369,11 @@
             line-height: 140%;
 
             color: $blackColor;
+
+            @include breakpoint(large_desktop){
+                width: 782px;
+                font-size: 18px;
+            }
         }
     }
 
@@ -298,6 +385,11 @@
         flex-shrink: 0;
 
         margin-top: 90px;
+
+        @include breakpoint(large_desktop){
+            height: 741px;
+            margin-top: 110px;
+        }
     }
 
     &-slide{
@@ -318,6 +410,11 @@
         justify-content: space-between;
         align-content: center;
         align-items: flex-start;
+
+        @include breakpoint(large_desktop){
+            margin-top: 110px;
+            margin-bottom: 110px;
+        }
     }
 
     &-moreTitle {
@@ -326,6 +423,10 @@
         font-weight: bold;
         font-size: 22px;
         line-height: 120%;
+
+        @include breakpoint(large_desktop){
+            font-size: 28px;
+        }
     }
 
     &-moreContainer{
@@ -353,6 +454,10 @@
         justify-content: flex-start;
         align-content: center;
         align-items: flex-end;
+
+        @include breakpoint(large_desktop){
+            margin-top: 35px;
+        }
     }
 
     &-git {
@@ -454,6 +559,10 @@
             text-align: right;
 
             color: $blackColor;
+
+            @include breakpoint(large_desktop){
+                font-size: 28px;
+            }
         }
     }
 
@@ -470,6 +579,10 @@
         align-content: flex-start;
         align-items: flex-end;
 
+        @include breakpoint(large_desktop){
+            margin-top: 35px;
+        }
+
         >a {
             font-family: $textFont;
             font-style: normal;
@@ -484,6 +597,11 @@
             color: $blackColor;
 
             margin-bottom: 10px;
+            
+            @include breakpoint(large_desktop){
+                margin-bottom: 15px;
+                font-size: 16px;
+            }
         }
     }
 
@@ -504,7 +622,7 @@
             font-style: normal;
             font-weight: normal;
             font-size: 12px;
-            line-height: 16px;
+            line-height: 120%;
             display: flex;
             align-items: flex-end;
             text-align: center;
@@ -512,6 +630,10 @@
             /* Black */
 
             color: $blackColor;
+
+            @include breakpoint(large_desktop){
+                font-size: 14px;
+            }
         }
     }
 }

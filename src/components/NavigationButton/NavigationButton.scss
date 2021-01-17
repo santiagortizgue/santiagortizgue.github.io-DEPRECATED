@@ -25,6 +25,7 @@
             &-right{
         
                 margin-left: 20px;
+
             }
 
         }
@@ -78,5 +79,9 @@
         align-items: center;
 
         color: $blackColor;
+
+        @include breakpoint(large_desktop){
+            font-size: 16px;
+        }
     }
 }
