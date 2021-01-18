@@ -58,7 +58,7 @@
     flex-shrink: 0;
 
     @include breakpoint(large_desktop){
-      width: 538px;
+      width: 497px;
     }
 
     @include breakpoint(laptop){
@@ -76,7 +76,7 @@
     position: relative;
 
     @include breakpoint(large_desktop){
-      height: 769px;
+      height: 710px;
     }
     @include breakpoint(laptop){
       height: 391px;
@@ -180,6 +180,7 @@
     
     @include breakpoint(large_desktop){
       width: 558px;
+      margin-right: 100px;
     }
 
     @include breakpoint(laptop){

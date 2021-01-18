@@ -3,11 +3,14 @@
 @mixin breakpoint($limit) {
     @if $limit == mobile {
         //320
-        @media screen and(min-width: 500px) { @content; }
+        @media screen and(max-width: 480px) { @content; }
+    }
+    @if $limit == tablet {
+        @media screen and(max-width: 800px) { @content; }
     }
     @if $limit == laptop {
         //768
-        @media screen and(min-width: 960px) and(max-width: 1124px) { @content; }
+        @media screen and(max-width: 1124px) { @content; }
     }
     @if $limit == desktop {
         //1224
