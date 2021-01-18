@@ -18,6 +18,10 @@
     width: $widthSize-1080;
   }
 
+  @include breakpoint(laptop){
+    width: $widthSize-960w;
+  }
+
   /***Top***/
 
   &-top {
@@ -149,6 +153,12 @@
     @include breakpoint(large_desktop){
       margin-bottom: 210px;
     }
+
+    @include breakpoint(laptop){
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
   }
 
   &-whatLeft {
@@ -157,6 +167,10 @@
 
     @include breakpoint(large_desktop){
       width: 203px;
+    }
+
+    @include breakpoint(laptop){
+      width: auto;
     }
 
     >h3 {
@@ -180,6 +194,10 @@
 
       @include breakpoint(large_desktop){
         font-size: 36px;
+      }
+
+      @include breakpoint(laptop){
+        margin-bottom: 20px;
       }
     }
   }
@@ -263,14 +281,19 @@
 
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
     align-items: flex-start;
 
-    
     @include breakpoint(large_desktop){
       margin-bottom: 210px;
+    }
+    
+    @include breakpoint(laptop){
+      flex-direction: column;
+      justify-content: flex-start;
+      align-content: flex-start;
     }
   }
 
@@ -293,10 +316,17 @@
 
       text-align: right;
 
+      
+    @include breakpoint(laptop){
+      width: auto;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
   }
 
   &-rightRecent {
-    width: 610px;
+    width: 662px;
     height: auto;
 
     display: flex;
@@ -305,6 +335,14 @@
     justify-content: flex-start;
     align-content: center;
     align-items: flex-end;
+
+    @include breakpoint(large_desktop){
+      width: 993px;
+    }
+
+    @include breakpoint(laptop){
+      width: 100%;
+    }
   }
 
   &-containerRecent {
@@ -320,13 +358,6 @@
     align-items: flex-start;
 
     margin-bottom: 24px;
-  }
-
-
-  &-project {
-    width: 260px;
-    height: 260px;
-    background-color: $grayColor;
   }
 
   /***Contact***/
@@ -349,6 +380,10 @@
       margin-bottom: 210px;
       height: 608px;
     }
+
+    @include breakpoint(laptop){
+      height: 363px;
+    }
   }
 
   &-leftContact {
@@ -363,6 +398,10 @@
     
     @include breakpoint(large_desktop){
       width: 650px;
+    }
+
+    @include breakpoint(laptop){
+      width: 396px;
     }
 
     >h5 {
@@ -383,10 +422,16 @@
 
       margin-right: 36px;
 
-      
       @include breakpoint(large_desktop){
         font-size: 22px;
       }
+
+      @include breakpoint(laptop){
+        width: auto;
+        height: auto;
+        font-size: 20px;
+        margin-right: 15px;
+       }
 
       >strong {
         color: $mainColor;
@@ -415,6 +460,13 @@
       @include breakpoint(large_desktop){
       font-size: 34px;
       }
+
+      @include breakpoint(laptop){
+       width: auto;
+       height: auto;
+       font-size: 27px;
+       margin-right: 15px;
+      }
       
     }
   }
@@ -430,10 +482,14 @@
 
     flex-shrink: 0;
 
-    
     @include breakpoint(large_desktop){
       height: 394px;
       margin-bottom: 130px;
+    }
+
+    @include breakpoint(laptop){
+      height: 240px;
+      margin-bottom: 50px;
     }
 
   }
@@ -448,6 +504,10 @@
     justify-content: flex-end;
     align-content: flex-end;
     align-items: center;
+
+    @include breakpoint(laptop){
+      width: 268px;
+    }
   }
 
   &-containerContact {

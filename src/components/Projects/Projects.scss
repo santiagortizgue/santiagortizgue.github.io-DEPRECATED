@@ -19,6 +19,10 @@
     width: $widthSize-1080;
   }
 
+  @include breakpoint(laptop){
+    width: $widthSize-960w;
+  }
+
   /** Container **/
 
   &-projects{
@@ -33,6 +37,11 @@
     align-items: flex-start;
 
     margin-bottom: 120px;
+
+    @include breakpoint(laptop){
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
 
   &-projectsLeft{
@@ -54,6 +63,13 @@
         width: 203px;
         font-size: 30px;
       }
+
+    @include breakpoint(laptop){
+      width: auto;
+      text-align: left;
+
+      margin-bottom: 20px;
+    }
   }
 
   &-projectsRight {
@@ -69,6 +85,11 @@
 
     @include breakpoint(large_desktop){
       width: 993px;
+    }
+
+    @include breakpoint(laptop){
+      width: 100%;
+      justify-content: flex-start;
     }
   }
 
@@ -105,6 +126,13 @@
       width: 203px;
       font-size: 30px;
     }
+
+    @include breakpoint(laptop){
+      width: auto;
+      text-align: left;
+
+      margin-bottom: 20px;
+    }
   }
 
   &-conceptsRight {
@@ -120,6 +148,11 @@
 
     @include breakpoint(large_desktop){
       width: 993px;
+    }
+
+    @include breakpoint(laptop){
+      width: 100%;
+      justify-content: flex-start;
     }
 
     >h3{

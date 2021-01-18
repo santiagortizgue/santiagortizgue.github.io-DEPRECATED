@@ -19,6 +19,10 @@
         width: $widthSize-1080;
     }
 
+    @include breakpoint(laptop){
+        width: $widthSize-960w;
+    }
+
     &-top{
         width: 100%;
         height: auto;
@@ -89,7 +93,7 @@
     }
 
     &-eLogo{
-        width: 637px;
+        width: 662px;
         height: 84px;
 
         display: flex;
@@ -102,6 +106,10 @@
         
         @include breakpoint(large_desktop){
             width: 989px;
+        }
+
+        @include breakpoint(laptop){
+            width: 100%;
         }
 
         >a{
@@ -127,8 +135,8 @@
     }
 
     &-cover{
-        width: 637px;
-        height: 376px;
+        width: 662px;
+        height: 372px;
 
         background-size: cover;
         background-position: center;
@@ -137,6 +145,11 @@
         @include breakpoint(large_desktop){
             width: 989px;
             height: 554px;
+        }
+
+        @include breakpoint(laptop){
+            width: 100%;
+            height: 372px;
         }
     }
 
@@ -152,6 +165,10 @@
         justify-content: flex-start;
         align-content: flex-start;
         align-items: flex-start;
+
+        @include breakpoint(laptop){
+            margin-top: 110px;
+        }
 
         >h3 {
             font-family: $titleFont;
@@ -185,6 +202,11 @@
                 width: 762px;
                 font-size: 18px;
             }
+
+            @include breakpoint(laptop){
+                width: 100%;
+            }
+            
         }
     }
 
@@ -198,8 +220,16 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-content: flex-start;
-        align-items: flex-start;
+        align-content: center;
+        align-items: center;
+
+        
+        @include breakpoint(laptop){
+            flex-direction: column;
+            justify-content: flex-start;
+
+            margin-top: 70px;
+        }
     }
 
     &-wireSmall{
@@ -213,6 +243,13 @@
             width: 510px;
             height: 652px;
         }
+
+        @include breakpoint(laptop){
+            margin-bottom: 25px;
+
+            width: 450px;
+            height: 575px;
+        }
     }
 
     &-wireBig{
@@ -224,6 +261,10 @@
 
         @include breakpoint(large_desktop){
             height: 439px;
+        }
+
+        @include breakpoint(laptop){
+            height: 373px;
         }
     }
 
@@ -242,6 +283,11 @@
             width: 780px;
             height: 652px;
         }
+
+        @include breakpoint(laptop){
+            width: 100%;
+            height: auto;
+        }
     }
 
     &-role {
@@ -257,6 +303,10 @@
 
         @include breakpoint(large_desktop){
             height: calc(100% - 439px);
+        }
+
+        @include breakpoint(laptop){
+            height: 122px;
         }
         
 
@@ -279,6 +329,10 @@
                 width: 222px;
                 font-size: 35px;
             }
+
+            @include breakpoint(laptop){
+                width: 151px;
+            }
         }
 
         >p {    
@@ -296,6 +350,10 @@
             @include breakpoint(large_desktop){
                 width: 538px;
                 font-size: 18px;
+            }
+
+            @include breakpoint(laptop){
+                width: 491px;
             }
         }
     }
@@ -335,6 +393,12 @@
         margin-top: 45px;
         }
 
+        @include breakpoint(laptop){
+            width: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
         >h3 {
             width: 250px;
             height: auto;
@@ -355,10 +419,14 @@
                 width: 510px;
                 font-size: 35px;
             }
+
+            @include breakpoint(laptop){
+                width: auto;
+                margin-bottom: 20px;
+            }
         }
 
         >p {    
-
             width: 520px;
             height: auto;
 
@@ -373,6 +441,11 @@
             @include breakpoint(large_desktop){
                 width: 782px;
                 font-size: 18px;
+            }
+
+            
+            @include breakpoint(laptop){
+                width: 100%;
             }
         }
     }
@@ -389,6 +462,10 @@
         @include breakpoint(large_desktop){
             height: 741px;
             margin-top: 110px;
+        }
+
+        @include breakpoint(laptop){
+            height: 372px;
         }
     }
 

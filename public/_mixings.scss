@@ -6,10 +6,12 @@
         @media screen and(min-width: 500px) { @content; }
     }
     @if $limit == laptop {
-        @media screen and(min-width: 768px) { @content; }
+        //768
+        @media screen and(min-width: 960px) and(max-width: 1124px) { @content; }
     }
     @if $limit == desktop {
-        @media screen and(min-width: 1224px) { @content; }
+        //1224
+        @media screen and(min-width: 1124px) { @content; }
     }
     @if $limit == large_desktop {
         //1824

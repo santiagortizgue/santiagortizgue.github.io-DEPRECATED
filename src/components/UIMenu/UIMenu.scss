@@ -74,7 +74,6 @@
 
     margin-bottom: 10px;
 
-
     @include breakpoint(large_desktop) {
       font-size: 18px;
       line-height: 120%;
@@ -106,6 +105,10 @@
       position: absolute;
       right: -10px;
       bottom: 4.5px;
+
+      @include breakpoint(large_desktop) {
+        bottom: 8.5px;
+      }
     }
   }
 }
