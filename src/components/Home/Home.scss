@@ -20,6 +20,12 @@
 
   @include breakpoint(laptop){
     width: $widthSize-960w;
+    min-width: $widthSize-960w;
+  }
+
+  @include breakpoint(mobile){
+    width: 100%;
+    padding: 20px 0;
   }
 
   /***Top***/

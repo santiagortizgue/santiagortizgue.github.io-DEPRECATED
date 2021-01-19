@@ -225,7 +225,7 @@
 }
 
 .MobileMenu{
-  display: none;
+  display: flex;
   position: fixed;
 
   width: 100%;
@@ -238,7 +238,13 @@
 
   background-color: red;
 
-  @include breakpoint(mobile){
-    display: flex;
+  @include breakpoint(laptop){
+    display: none;
+  }
+  @include breakpoint(desktop){
+    display: none;
+  }
+  @include breakpoint(large_desktop){
+    display: none;
   }
 }
