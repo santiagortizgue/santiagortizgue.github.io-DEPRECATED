@@ -82,7 +82,7 @@ export const Menu = observer(() => {
             )
         } else {
             return (
-                <svg className="Menu-icon" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                <svg className="Menu-icon" viewBox="0 0 20 18">
                     <path fillRule="evenodd" clipRule="evenodd" d="M0 0V2.8H20V0H0ZM0 10V7.20001H20V10H0ZM0 17.2V14.4H20V17.2H0Z" />
                 </svg>)
         }
@@ -135,7 +135,21 @@ export const MobileMenu = () => {
 
     return (
         <div className="MobileMenu">
-            
+            <Link className="MobileMenu-logo" to="/" onClick={()=>{
+                window.scrollTo(0, 0);}}>
+                <svg viewBox="0 0 96 172">
+                    <path d="M76.3674 -1.35303e-05L19.0918 57.2756L38.1837 76.3675L95.4593 19.0919L76.3674 -1.35303e-05Z"/>
+                    <path d="M76.3675 76.3671L0 152.735L19.0919 171.827L95.4594 95.459L76.3675 76.3671Z"/>
+                </svg>
+            </Link>
+
+            <h1>santiag<strong>ortiz</strong>gue</h1>
+
+            <div className="MobileMenu-icon">
+                <svg className="Menu-icon" viewBox="0 0 20 18">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M0 0V2.8H20V0H0ZM0 10V7.20001H20V10H0ZM0 17.2V14.4H20V17.2H0Z" />
+                </svg>
+            </div>
         </div>
     )
 }

@@ -2,12 +2,18 @@
 
 
 .Logo {
+  display: none;
+
   width: 22px;
   height: 35px;
 
   position: fixed;
   top: $paddingSize;
   left: $paddingSize;
+
+  @include breakpoint(tablet) {
+    display: flex;
+  }
 
   @include breakpoint(large_desktop) {
     width: 28px;
@@ -33,9 +39,15 @@
 }
 
 .Menu {
+  display: none;
+
   position: fixed;
   top: $paddingSize;
   right: $paddingSize;
+
+  @include breakpoint(tablet) {
+    display: flex;
+  }
 
   &-icon {
     width: 20px;
@@ -121,12 +133,16 @@
   bottom: $paddingSize;
   left: $paddingSize;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
   align-items: center;
+
+  @include breakpoint(tablet) {
+    display: flex;
+  }
 
   >a {
     width: 20px;
@@ -171,19 +187,23 @@
   bottom: $paddingSize;
   right: $paddingSize;
 
-  display: flex;
+  display: none;
   justify-content: center;
   align-content: center;
   align-items: center;
 
   cursor: pointer;
 
+  @include breakpoint(tablet) {
+    display: flex;
+  }
+
   @include breakpoint(large_desktop) {
     width: 55px;
     height: 55px;
   }
 
-  &:hover{
+  &:hover {
     background-color: $mainColor;
   }
 
@@ -215,7 +235,13 @@
 
   bottom: $paddingSize;
   right: 100px;
-  
+
+  display: none;
+
+  @include breakpoint(tablet) {
+    display: flex;
+  }
+
   @include breakpoint(large_desktop) {
     width: 55px;
     height: 55px;
@@ -224,27 +250,67 @@
   }
 }
 
-.MobileMenu{
+.MobileMenu {
   display: flex;
   position: fixed;
 
   width: 100%;
-  height: 70px;
-  padding: 20px;
+  height: $mobile_menu_height;
+  padding: 20px $mobile_padding;
 
   bottom: 0;
 
   z-index: 1;
 
-  background-color: red;
+  background-color: $grayColor;
 
-  @include breakpoint(laptop){
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: center;
+  align-content: center;
+
+  @include breakpoint(tablet) {
     display: none;
   }
-  @include breakpoint(desktop){
-    display: none;
+
+  @include breakpoint(laptop) {}
+
+  @include breakpoint(desktop) {}
+
+  @include breakpoint(large_desktop) {}
+
+  &-logo {
+    display: flex;
+
+    width: 16px;
+    height: 30px;
+
+    >svg {
+      width: 100%;
+      height: 100%;
+
+      >path {
+        fill: $blackColor;
+        transition: ease-in-out all .2s;
+      }
+
+      &:hover {
+        >path {
+          fill: $mainColor;
+        }
+      }
+
+    }
   }
-  @include breakpoint(large_desktop){
-    display: none;
+
+  >h1{
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+
+    color: $blackColor;
   }
 }
