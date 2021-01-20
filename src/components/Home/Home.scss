@@ -14,6 +14,24 @@
 
   padding: 0 $mobile_padding;
 
+  @include breakpoint(tablet){
+    padding: 0 $tablet_padding;
+  }
+
+  @include breakpoint(laptop){
+    width: $widthSize-laptop;
+
+    padding: 0;
+  }
+
+  @include breakpoint(desktop){
+    width: $widthSize-desktop;
+  }
+
+  @include breakpoint(large_desktop){
+    width: $widthSize-largeDesktop;
+  }
+
   /***Top***/
 
   &-top {
@@ -45,15 +63,9 @@
 
     margin-bottom: 33px;
 
-    @include breakpoint(tablet) {
-      width: 378px;
-      height: 515px;
-    }
-
-    @include breakpoint(large_desktop) {
+    @include breakpoint(large_desktop){
       width: 466px;
       height: 634px;
-      margin-bottom: 45px;
     }
 
     >svg {
@@ -140,6 +152,15 @@
 
     margin-bottom: 125px;
 
+    @include breakpoint(desktop){
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include breakpoint(large_desktop){
+      margin-bottom: 280px;
+    }
+
   }
 
   &-whatLeft {
@@ -147,6 +168,14 @@
     height: auto;
 
     margin-bottom: 15px;
+
+    @include breakpoint(desktop){
+      width: 160px;
+    }
+
+    @include breakpoint(large_desktop){
+      width: 210px;
+    }
 
     >h3 {
       width: 100%;
@@ -170,33 +199,45 @@
       @include breakpoint(large_desktop) {
         font-size: 36px;
       }
-
-      @include breakpoint(laptop) {
-        margin-bottom: 20px;
-      }
     }
   }
 
   &-whatRight {
-    width: auto;
+    width: 100%;
     height: auto;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-content: center;
     align-items: flex-start;
+
+    @include breakpoint(desktop){
+      width: 610px;
+    }
+
+    @include breakpoint(large_desktop){
+      width: 720px;
+    }
   }
 
   &-profile {
     width: 100%;
     height: auto;
+
+    @include breakpoint(laptop){
+      width: 50%;
+    }
   }
 
   &-other {
     width: 100%;
     height: auto;
+
+    @include breakpoint(laptop){
+      width: 50%;
+    }
   }
 
   &-whatTitle {
@@ -249,6 +290,15 @@
     justify-content: flex-start;
     align-content: center;
     align-items: flex-start;
+
+    @include breakpoint(desktop){
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include breakpoint(desktop){
+      margin-bottom: 280px;
+    }
   }
 
   &-leftRecent {
@@ -272,6 +322,16 @@
 
     margin-bottom: 30px;
 
+    @include breakpoint(desktop){
+      width: 160px;
+      text-align: right;
+    }
+
+    @include breakpoint(large_desktop){
+      width: 203px;
+      font-size: 36px;
+    }
+
   }
 
   &-rightRecent {
@@ -283,6 +343,15 @@
     justify-content: flex-start;
     align-content: center;
     align-items: flex-end;
+
+    
+    @include breakpoint(desktop){
+      width: 662px;
+    }
+
+    @include breakpoint(large_desktop){
+      width: 993px;
+    }
   }
 
   &-containerRecent {
@@ -296,6 +365,14 @@
     align-items: flex-start;
     align-content: center;
     align-items: flex-start;
+
+    @include breakpoint(laptop){
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      align-content: center;
+      align-items: flex-start;
+  }
 
     margin-bottom: 24px;
   }
@@ -314,6 +391,10 @@
     justify-content: flex-start;
     align-content: center;
     align-items: flex-start;
+
+    @include breakpoint(desktop){
+      flex-direction: row;
+    }
   }
 
   &-leftContact {
@@ -325,6 +406,14 @@
     justify-content: flex-start;
     align-content: flex-end;
     align-items: flex-end;
+
+    @include breakpoint(desktop){
+      width: 516px;
+    }
+
+    @include breakpoint(large_desktop){
+      width:650px;
+    }
 
     >h5 {
       font-family: $titleFont;
@@ -341,6 +430,11 @@
       /* Black */
 
       color: $blackColor;
+
+      @include breakpoint(desktop){
+        margin-right: 25px;
+        font-size: 22px;
+      }
 
       >strong {
         color: $mainColor;
@@ -364,6 +458,11 @@
 
       color: $blackColor;
 
+      @include breakpoint(desktop){
+        margin-right: 25px;
+        font-size: 28px;
+      }
+
     }
   }
 
@@ -374,20 +473,17 @@
 
     flex-shrink: 0;
 
-    @include breakpoint(large_desktop) {
-      height: 394px;
-      margin-bottom: 130px;
+    @include breakpoint(laptop) {
+      margin-bottom: 50px;
     }
 
-    @include breakpoint(laptop) {
-      height: 240px;
-      margin-bottom: 50px;
+    @include breakpoint(large_desktop) {
+      margin-bottom: 130px;
     }
 
   }
 
   &-rightContact {
-
     margin-top: 29px;
 
     width: 100%;
@@ -399,6 +495,18 @@
     justify-content: flex-end;
     align-content: flex-end;
     align-items: center;
+
+    @include breakpoint(desktop){
+      width: 314px;
+
+      margin-top: 160px;
+    }
+
+    @include breakpoint(large_desktop) {
+      width: 345px;
+
+      margin-top: 320px;
+    }
   }
 
   &-containerContact {
@@ -514,7 +622,6 @@
     }
 
     @include breakpoint(tablet) {
-
       margin-bottom: $paddingSize;
     }
   }

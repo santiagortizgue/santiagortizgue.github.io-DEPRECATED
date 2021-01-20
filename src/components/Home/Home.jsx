@@ -27,7 +27,7 @@ const Home = () => {
 
   function calcIndex() {
     let v = 0;
-    if(window.innerWidth >= 1624){
+    if(window.innerWidth >= 1440){
       v = 3;
     }else{
       v = 2;
@@ -126,10 +126,10 @@ const Home = () => {
           <Fade timeout={750} left>
             <img src='/img/ContactImg.png' alt="Call to Action" className="Home-contactImg"/>
           </Fade>
-          <Fade timeout={750} delay={50} bottom>
+          <Fade timeout={750} delay={150}>
             <h5>Let’s <strong> work </strong> together!</h5>
           </Fade>
-          <Fade timeout={750} delay={350} bottom>
+          <Fade timeout={750} delay={350}>
             <h3>{stores.uiStore.email}</h3>
           </Fade>
         </div>

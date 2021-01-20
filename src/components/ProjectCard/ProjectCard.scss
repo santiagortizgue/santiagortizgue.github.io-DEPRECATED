@@ -16,6 +16,14 @@
 
     text-decoration: none;
 
+    @include breakpoint(laptop){
+        width: 50%;
+    }
+
+    @include breakpoint(desktop){
+        width: $sizeProjectCard;
+    }
+
     &:hover{
         background-size: cover;
     }
@@ -82,8 +90,16 @@
             font-family: $titleFont;
             font-style: normal;
             font-weight: normal;
-            font-size: 27px;
+            font-size: 25px;
             line-height: 120%;
+
+            @include breakpoint(laptop){
+                font-size: 20px;
+            }
+
+            @include breakpoint(desktop){
+                font-size: 25px;
+            }
         }
 
         >svg{

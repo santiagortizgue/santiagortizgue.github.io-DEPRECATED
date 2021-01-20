@@ -12,7 +12,11 @@ $widthSize-960w: 662px;
 $widthSize-720: 880px;
 $widthSize-1080: 1320px;
 
-$sizeProjectCard-720: 331px;
+$widthSize-laptop: 568px;
+$widthSize-desktop: 880px;
+$widthSize-largeDesktop: 1300px;
+
+$sizeProjectCard: 331px;
 $card_paddingSize: 25px;
 
 $sizeProjectCard-1080: 331px;
@@ -24,5 +28,7 @@ $card_paddingSize: 25px;
 
 $mobile_padding: 30px;
 $mobile_menu_height: 70px;
+
+$tablet_padding: 90px;
 
 @import "./_mixings.scss";
