@@ -41,17 +41,17 @@ const ProjectView = (props) => {
 
             <Fade timeout={750} delay={500}>
                 <div className="ProjectView-coverContainer">
-                    <div className="ProjectView-cover" style={{ backgroundImage: `url(./img/projects/${data.id}/header.png)` }} ></div>
-                
-                    {data.e_logo ? 
+                    <img className="ProjectView-cover" alt="header" src={`./img/projects/${data.id}/header.png`} />
+
+                    {data.e_logo ?
                         <div className="ProjectView-eLogo">
                             <h3>Made working for</h3>
                             <a target='_blank' rel='noopener noreferrer' href={data.e_logo.url} >
-                                <img src={`./img/logos/${data.e_logo.logo}`} alt="logo"/>
+                                <img src={`./img/logos/${data.e_logo.logo}`} alt="logo" />
                             </a>
                         </div>
-                    : ''}
-                
+                        : ''}
+
                 </div>
             </Fade>
 
@@ -63,38 +63,32 @@ const ProjectView = (props) => {
             </Fade>
 
             <div className="ProjectView-wireframes">
-                <Fade timeout={750} left>
-                    <div className="ProjectView-wireSmall" style={{ backgroundImage: `url(./img/projects/${data.id}/mid_left.png)` }}></div>
-                </Fade>
+                <img className="ProjectView-wireSmall" src={`./img/projects/${data.id}/mid_left.png`} alt="wireframe" />
 
-                <Fade timeout={750} right>
-                    <div className="ProjectView-wireLeft">
+                <div className="ProjectView-wireLeft">
 
-                        <div className="ProjectView-wireBig" style={{ backgroundImage: `url(./img/projects/${data.id}/mid_right.png)` }}></div>
+                    <img className="ProjectView-wireBig" src={`./img/projects/${data.id}/mid_right.png`} alt="wireframe" />
 
-                        <div className="ProjectView-role">
-                            <h3>Role</h3>
-                            <p>{data.role}</p>
-                        </div>
-
+                    <div className="ProjectView-role">
+                        <h3>Role</h3>
+                        <p>{data.role}</p>
                     </div>
-                </Fade>
-            </div>
-
-                <div className="ProjectView-topicContainer">
-
-                    {data.topics.map((elem, index) => {
-                        return (
-                            <Fade  key={index}  timeout={350} bottom>
-                                <div className="ProjectView-topic">
-                                    <h3>{elem.name}</h3>
-                                    <p>{elem.text}</p>
-                                </div>
-                            </Fade>
-                        )
-                    })}
 
                 </div>
+            </div>
+
+            <div className="ProjectView-topicContainer">
+
+                {data.topics.map((elem, index) => {
+                    return (
+                        <div key={index} className="ProjectView-topic">
+                            <h3>{elem.name}</h3>
+                            <p>{elem.text}</p>
+                        </div>
+                    )
+                })}
+
+            </div>
 
             <Fade timeout={1000}>
                 <div className="ProjectView-slides">
@@ -132,18 +126,18 @@ const ProjectView = (props) => {
                     </div>
 
                     {data.teammates ?
-                    <div className="ProjectView-teammates">
-                        <h3>Teammates</h3>
-                        <div className="ProjectView-contTeammates">
-                            {data.teammates.map((t, index) => {
-                                return (
-                                    <a key={index} target='_blank' rel='noopener noreferrer' href={t.route}>{t.name}</a>
-                                )
-                            })}
+                        <div className="ProjectView-teammates">
+                            <h3>Teammates</h3>
+                            <div className="ProjectView-contTeammates">
+                                {data.teammates.map((t, index) => {
+                                    return (
+                                        <a key={index} target='_blank' rel='noopener noreferrer' href={t.route}>{t.name}</a>
+                                    )
+                                })}
+                            </div>
                         </div>
-                    </div>
-                     : ''}
-                    
+                        : ''}
+
 
                 </div>
             </Fade>

@@ -1,7 +1,7 @@
 @import './public/variables.scss';
 
 .ProjectView {
-    width: $widthSize-720;
+    width: 100%;
     height: auto;
     flex-shrink: 0;
 
@@ -12,15 +12,28 @@
     align-content: flex-start;
     align-items: flex-start;
 
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 0 $mobile_padding;
 
-    @include breakpoint(large_desktop){
-        width: $widthSize-1080;
+    padding-top: 40px;
+  
+    @include breakpoint(tablet) {
+      padding: 0 $tablet_padding;
+      padding-top: 40px;
+    }
+  
+    @include breakpoint(laptop) {
+      width: $widthSize-laptop;
+  
+      padding: 0;
+      padding-top: 40px;
     }
 
-    @include breakpoint(laptop){
-        width: $widthSize-960w;
+    @include breakpoint(desktop){
+        width: $widthSize-desktop;
+    }
+
+    @include breakpoint(large_desktop){
+        width: $widthSize-largeDesktop;
     }
 
     &-top{
@@ -28,14 +41,19 @@
         height: auto;
 
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: flex-start;
 
         margin-top: 45px;
+
+        @include breakpoint(tablet){
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     &-header {
-        width: 520px;
+        width: 100%;
         height: auto;
 
         text-align: left;
@@ -47,6 +65,10 @@
         line-height: 120%;
 
         color: $blackColor;
+
+        @include breakpoint(tablet){
+            width: 520px;
+        }
 
         @include breakpoint(large_desktop){
             width: 762px;
@@ -64,9 +86,13 @@
         font-size: 22px;
         line-height: 120%;
 
-        text-align: right;
+        text-align: left;
 
         color: $blackColor;
+
+        @include breakpoint(tablet){
+            text-align: right;
+        }
 
         @include breakpoint(large_desktop){
             font-size: 28px;
@@ -83,9 +109,7 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         align-content: center;
-        align-items: center;
-
-        
+        align-items: center;        
         
         @include breakpoint(large_desktop){
             margin-top: 70px;
@@ -93,7 +117,7 @@
     }
 
     &-eLogo{
-        width: 662px;
+        width: 100%;
         height: 84px;
 
         display: flex;
@@ -103,13 +127,13 @@
         align-content: center;
         align-items: center;
 
+    
+        @include breakpoint(desktop){
+            width: 100%;
+        }
         
         @include breakpoint(large_desktop){
             width: 989px;
-        }
-
-        @include breakpoint(laptop){
-            width: 100%;
         }
 
         >a{
@@ -135,21 +159,23 @@
     }
 
     &-cover{
-        width: 662px;
-        height: 372px;
+        width: 100%;
 
         background-size: cover;
         background-position: center;
 
+
+        @include breakpoint(laptop){
+        }
+
+        @include breakpoint(desktop){
+            width: 662px;
+            height: 372px;
+        }
         
         @include breakpoint(large_desktop){
             width: 989px;
             height: 554px;
-        }
-
-        @include breakpoint(laptop){
-            width: 100%;
-            height: 372px;
         }
     }
 
@@ -188,7 +214,7 @@
         }
 
         >p {
-            width: 540px;
+            width: 100%;
 
             font-family: $textFont;
             font-style: normal;
@@ -198,13 +224,13 @@
 
             color: $blackColor;
 
+            @include breakpoint(laptop){
+                width: 540px;
+            }
+
             @include breakpoint(large_desktop){
                 width: 762px;
                 font-size: 18px;
-            }
-
-            @include breakpoint(laptop){
-                width: 100%;
             }
             
         }
@@ -217,60 +243,34 @@
         margin-top: 110px;
 
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
         align-content: center;
         align-items: center;
-
-        
-        @include breakpoint(laptop){
-            flex-direction: column;
-            justify-content: flex-start;
-
-            margin-top: 70px;
-        }
     }
 
     &-wireSmall{
-        width: 340px;
-        height: 435px;
+        width: 100%;
+        margin-bottom: 25px;
 
-        background-size: cover;
-        background-position: center;
+        @include breakpoint(laptop){
+            margin-bottom: 0;
+        }
 
         @include breakpoint(large_desktop){
             width: 510px;
-            height: 652px;
-        }
-
-        @include breakpoint(laptop){
-            margin-bottom: 25px;
-
-            width: 450px;
-            height: 575px;
         }
     }
 
     &-wireBig{
         width: 100%;
-        height: 293px;
 
-        background-size: cover;
-        background-position: center;
-
-        @include breakpoint(large_desktop){
-            height: 439px;
-        }
-
-        @include breakpoint(laptop){
-            height: 373px;
-        }
     }
 
     &-wireLeft{
-        width: 520px;
-        height: 435px;
+        width: 100%;
+        height: auto;
 
         display: flex;
         flex-direction: column;
@@ -281,18 +281,11 @@
 
         @include breakpoint(large_desktop){
             width: 780px;
-            height: 652px;
-        }
-
-        @include breakpoint(laptop){
-            width: 100%;
-            height: auto;
         }
     }
 
     &-role {
         width: 100%;
-        height: calc(100% - 293px);
 
         display: flex;
         flex-direction: row;
@@ -301,17 +294,11 @@
         align-content: center;
         align-items: center;
 
-        @include breakpoint(large_desktop){
-            height: calc(100% - 439px);
-        }
-
-        @include breakpoint(laptop){
-            height: 122px;
-        }
+        padding: 20px;
         
 
         >h3 {
-            width: 120px;
+            width: auto;
 
             text-align: right;
 
@@ -325,19 +312,17 @@
 
             margin-right: 20px;
 
+            @include breakpoint(laptop){
+                width: 151px;
+            }
+
             @include breakpoint(large_desktop){
                 width: 222px;
                 font-size: 35px;
             }
-
-            @include breakpoint(laptop){
-                width: 151px;
-            }
         }
 
         >p {    
-
-            width: 372px;
 
             font-family: $textFont;
             font-style: normal;
@@ -385,22 +370,22 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-end;
+        flex-direction: column;
+        justify-content: flex-start;
         align-content: flex-start;
         align-items: flex-start;
 
         @include breakpoint(large_desktop){
-        margin-top: 45px;
+            margin-top: 45px;
         }
 
         @include breakpoint(laptop){
-            width: 100%;
-            flex-direction: column;
-            justify-content: flex-start;
+            flex-direction: row;
+            justify-content: flex-end;
         }
 
         >h3 {
-            width: 250px;
+            width: auto;
             height: auto;
 
             text-align: right;
@@ -414,20 +399,17 @@
             color: $blackColor;
 
             margin-right: 20px;
+
+            margin-bottom: 20px;
             
             @include breakpoint(large_desktop){
                 width: 510px;
                 font-size: 35px;
             }
-
-            @include breakpoint(laptop){
-                width: auto;
-                margin-bottom: 20px;
-            }
         }
 
         >p {    
-            width: 520px;
+            width: 100%;
             height: auto;
 
             font-family: $textFont;
@@ -442,17 +424,11 @@
                 width: 782px;
                 font-size: 18px;
             }
-
-            
-            @include breakpoint(laptop){
-                width: 100%;
-            }
         }
     }
 
     &-slides{
         width: 100%;
-        height: 494px;
 
         display: flex;
         flex-shrink: 0;
@@ -460,12 +436,7 @@
         margin-top: 90px;
 
         @include breakpoint(large_desktop){
-            height: 741px;
             margin-top: 110px;
-        }
-
-        @include breakpoint(laptop){
-            height: 372px;
         }
     }
 
@@ -683,34 +654,35 @@
     }
 
     /***Footer***/
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    height: auto;
 
-    footer {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-content: center;
-        align-items: center;
-        height: auto;
+    margin-bottom: 90px;
 
-        >h4 {
-            font-family: $textFont;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 120%;
-            display: flex;
-            align-items: flex-end;
-            text-align: center;
+    >h4 {
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 120%;
+      display: flex;
+      align-items: flex-end;
+      text-align: center;
 
-            /* Black */
+      /* Black */
 
-            color: $blackColor;
-
-            @include breakpoint(large_desktop){
-                font-size: 14px;
-            }
-        }
+      color: $blackColor;
     }
+
+    @include breakpoint(tablet) {
+      margin-bottom: $paddingSize;
+    }
+  }
 }
