@@ -19,7 +19,7 @@ const Projects = () => {
 
   return (
     <div className="Projects">
-
+      <Fade timeout={750}>
       <div className="Projects-projects">
         <h1 className="Projects-projectsLeft">
           Projects
@@ -29,13 +29,12 @@ const Projects = () => {
           {
           stores.projectStore.arrayProjects.map((elem, index) => {
             return (
-                <Fade key={index} timeout={750} delay={index * 350}>
-                  <ProjectCard project={elem} />
-                </Fade>)
+                  <ProjectCard key={index} project={elem} />)
           }
           )}
         </div>
       </div>
+      </Fade>
 
       <div className="Projects-concepts">
 
@@ -49,9 +48,7 @@ const Projects = () => {
 
           {stores.projectStore.arrayConcepts.map((elem, index) => {
             return (
-                <Fade key={index} timeout={750} delay={index * 350}>
-                  <div>Concept</div>
-                </Fade>)
+                  <div>Concept</div>)
           }
           )}
         </div>

@@ -2,19 +2,22 @@
 
 @mixin breakpoint($limit) {
     @if $limit == mobile {
-        //320
-        @media screen and(max-width: 500px) { @content; }
+        @media screen and(min-width: 320px) { @content; }
     }
-    @if $limit == laptop {
-        //768
-        @media screen and(min-width: 860px) and(max-width: 1123px) { @content; }
+    @else if $limit == tablet {
+        @media screen and(min-width: 500px) { @content; }
     }
-    @if $limit == desktop {
-        //1224
-        @media screen and(min-width: 1124px) and(max-width: 1623px) { @content; }
+    @else if $limit == laptop {
+        @media screen and(min-width: 768px) { @content; }
     }
-    @if $limit == large_desktop {
-        //1824
-        @media screen and(min-width: 1624px) { @content; }
+    @else if $limit == desktop {
+        @media screen and(min-width: 1024px) { @content; }
+    }
+    @else if $limit == large_desktop {
+        //1440px
+        @media screen and(min-width: 1480px) { @content; }
+    }
+    @else if $limit == laptop_MAX {
+        @media screen and(max-width: 767px) { @content; }
     }
 }

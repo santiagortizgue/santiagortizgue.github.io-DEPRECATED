@@ -27,7 +27,7 @@ const Home = () => {
 
   function calcIndex() {
     let v = 0;
-    if(window.innerWidth >= 1624){
+    if(window.innerWidth >= 1440){
       v = 3;
     }else{
       v = 2;
@@ -56,12 +56,12 @@ const Home = () => {
         <Fade timeout={1000} bottom cascade delay={350}>
           <div className="Home-topInfo">
             <h3>Hi, I’m Santiago</h3>
-            <h4>My <strong>creativity</strong> allows me to build <strong className="Home-strongColor">experiences</strong> & <strong className="Home-strongColor">interfaces</strong></h4>
+            <h4>My <strong>creativity</strong> allows me to build<br></br> <strong className="Home-strongColor">experiences</strong> & <strong className="Home-strongColor">interfaces</strong></h4>
           </div>
         </Fade>
       </div>
 
-      <Fade top timeout={1000} cascade>
+      <Fade bottom timeout={750} cascade>
       <div className="Home-whatIDo">
             <div className="Home-whatLeft">
                 <h3>What I Do</h3>
@@ -97,6 +97,7 @@ const Home = () => {
       </div>
       </Fade>
 
+      <Fade timeout={750}>
       <div className="Home-recentWork">
         
         <h3 className="Home-leftRecent">Recent Work</h3>
@@ -108,9 +109,7 @@ const Home = () => {
                 return ('');
               }
               return (
-                <Fade right timeout={750} key={index} delay={index * 250}>
-                  <ProjectCard project={elem} />
-                </Fade>
+                  <ProjectCard key={index} project={elem} />
               )
             })}
           </div>
@@ -125,12 +124,12 @@ const Home = () => {
         <div className="Home-leftContact">
 
           <Fade timeout={750} left>
-            <div style={{ backgroundImage: "url('./img/ContactImg.png')" }} className="Home-contactImg"></div>
+            <img src='/img/ContactImg.png' alt="Call to Action" className="Home-contactImg"/>
           </Fade>
-          <Fade timeout={750} delay={50} bottom>
+          <Fade timeout={750} delay={150}>
             <h5>Let’s <strong> work </strong> together!</h5>
           </Fade>
-          <Fade timeout={750} delay={350} bottom>
+          <Fade timeout={750} delay={350}>
             <h3>{stores.uiStore.email}</h3>
           </Fade>
         </div>
@@ -142,6 +141,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      </Fade>
 
       <footer className="footer">
         <h4>© 2019 Santiago Ortiz Guevara.</h4>

@@ -1,7 +1,7 @@
 @import './public/variables.scss';
 
 .Projects {
-  width: $widthSize-720;
+  width: 100%;
   height: auto;
   flex-shrink: 0;
 
@@ -12,150 +12,177 @@
   align-content: center;
   align-items: center;
 
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 0 $mobile_padding;
 
-  @include breakpoint(large_desktop){
-    width: $widthSize-1080;
+  padding-top: 40px;
+
+  @include breakpoint(tablet) {
+    padding: 0 $tablet_padding;
+    padding-top: 40px;
+    
   }
 
-  @include breakpoint(laptop){
-    width: $widthSize-960w;
+  @include breakpoint(laptop) {
+    width: $widthSize-laptop;
+
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  @include breakpoint(desktop) {
+    width: $widthSize-desktop;
+  }
+
+  @include breakpoint(large_desktop) {
+    width: $widthSize-largeDesktop;
   }
 
   /** Container **/
 
-  &-projects{
+  &-projects {
     width: 100%;
     height: auto;
 
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
 
     margin-bottom: 120px;
 
-    @include breakpoint(laptop){
-      flex-direction: column;
-      justify-content: flex-start;
+    @include breakpoint(desktop){
+      flex-direction: row;
+      justify-content: space-between;
     }
+
   }
 
-  &-projectsLeft{
+  &-projectsLeft {
 
-    width: 160px;
+    width: auto;
     height: auto;
 
-      font-family: $titleFont;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 24px;
-      line-height: 120%;
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 120%;
 
-      color: $blackColor;
+    color: $blackColor;
 
-      text-align: right;
+    text-align: left;
 
-      @include breakpoint(large_desktop){
-        width: 203px;
-        font-size: 30px;
-      }
+    margin-bottom: 25px;
 
-    @include breakpoint(laptop){
-      width: auto;
-      text-align: left;
+    @include breakpoint(desktop){
+     width: 160px;
+     text-align: right;
+    }
 
-      margin-bottom: 20px;
+    @include breakpoint(large_desktop) {
+      width: 203px;
+      font-size: 30px;
     }
   }
 
   &-projectsRight {
-    width: 662px;
-    height: auto;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: flex-start;
-
-    @include breakpoint(large_desktop){
-      width: 993px;
-    }
-
-    @include breakpoint(laptop){
-      width: 100%;
-      justify-content: flex-start;
-    }
-  }
-
-  &-concepts{
     width: 100%;
     height: auto;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    @include breakpoint(laptop){
+      flex-direction: row;
+    }
+
+    @include breakpoint(desktop){
+      width: 662px;
+      justify-content: flex-end;
+     }
+
+    @include breakpoint(large_desktop) {
+      width: 993px;
+    }
+  }
+
+  &-concepts {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
 
     margin-bottom: 120px;
+
+    @include breakpoint(desktop){
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
-  &-conceptsLeft{
-    
-    width: 160px;
+  &-conceptsLeft {
+
+    width: 100%;
     height: auto;
 
-      font-family: $titleFont;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 24px;
-      line-height: 120%;
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 120%;
 
-      color: $blackColor;
+    color: $blackColor;
 
+    text-align: left;
+
+    margin-bottom: 25px;
+
+    @include breakpoint(desktop){
+      width: 160px;
       text-align: right;
+     }
 
-    @include breakpoint(large_desktop){
+    @include breakpoint(large_desktop) {
       width: 203px;
       font-size: 30px;
-    }
-
-    @include breakpoint(laptop){
-      width: auto;
-      text-align: left;
-
-      margin-bottom: 20px;
     }
   }
 
   &-conceptsRight {
-    width: 662px;
+    width: 100%;
     height: auto;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-content: center;
+    align-content: flex-start;
     align-items: flex-start;
 
-    @include breakpoint(large_desktop){
+    @include breakpoint(laptop){
+      flex-direction: row;
+    }
+
+    @include breakpoint(desktop){
+      width: 662px;
+     }
+
+    @include breakpoint(large_desktop) {
       width: 993px;
     }
 
-    @include breakpoint(laptop){
-      width: 100%;
-      justify-content: flex-start;
-    }
-
-    >h3{
+    >h3 {
 
       font-family: $textFont;
       font-style: normal;
@@ -176,33 +203,36 @@
 
   /***Footer***/
 
-    footer {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-content: center;
-        align-items: center;
-        height: auto;
+  /***Footer***/
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    height: auto;
 
-        >h4 {
-            font-family: $textFont;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 120%;
-            display: flex;
-            align-items: flex-end;
-            text-align: center;
+    margin-bottom: 90px;
 
-            /* Black */
+    >h4 {
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 120%;
+      display: flex;
+      align-items: flex-end;
+      text-align: center;
 
-            color: $blackColor;
+      /* Black */
 
-            @include breakpoint(large_desktop){
-                font-size: 14px;
-            }
-        }
+      color: $blackColor;
     }
+
+    @include breakpoint(tablet) {
+      margin-bottom: $paddingSize;
+    }
+  }
 }
