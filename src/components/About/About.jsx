@@ -60,11 +60,11 @@ const About = () => {
 
       <div className="About-info">
 
-        <Fade timeout={1000} delay={150} left>
+        <Fade timeout={1000} delay={150} bottom>
           {changeRightInfoHandler(stores.uiStore.actualInfo)}
         </Fade>
 
-        <Fade timeout={1000} delay={150} right>
+        <Fade timeout={1000} delay={150} bottom>
           <div className="About-infoLeft">
 
             <h4>Experience & Skills</h4>

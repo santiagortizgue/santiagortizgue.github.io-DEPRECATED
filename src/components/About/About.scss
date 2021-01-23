@@ -73,6 +73,10 @@
 
     flex-shrink: 0;
 
+    @include breakpoint(tablet){
+      max-width: 400px;
+    }
+
     @include breakpoint(laptop) {
       width: 60%;
     }

@@ -114,7 +114,7 @@ const Home = () => {
             })}
           </div>
 
-          <Fade right timeout={750} delay={250}>
+          <Fade top timeout={750} delay={250}>
             <NavigationButton route={"/projects"} text={"See all projects"} type={"right"}/>
           </Fade>
         </div>
@@ -123,7 +123,7 @@ const Home = () => {
       <div className="Home-contact">
         <div className="Home-leftContact">
 
-          <Fade timeout={750} left>
+          <Fade timeout={750} top>
             <img src='/img/ContactImg.png' alt="Call to Action" className="Home-contactImg"/>
           </Fade>
           <Fade timeout={750} delay={150}>

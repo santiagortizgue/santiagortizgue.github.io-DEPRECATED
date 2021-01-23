@@ -26,13 +26,13 @@ const ProjectView = (props) => {
             <NavigationButton text={"Back to projects"} route={"/projects"} type={"left"} />
 
             <div className="ProjectView-top">
-                <Fade timeout={750} left>
+                <Fade timeout={750} top>
                     <h1 className="ProjectView-header">
                         {data.title}
                     </h1>
                 </Fade>
 
-                <Fade timeout={750} right delay={250}>
+                <Fade timeout={750} top delay={250}>
                     <h1 className="ProjectView-year">
                         {data.year}
                     </h1>
@@ -55,7 +55,7 @@ const ProjectView = (props) => {
                 </div>
             </Fade>
 
-            <Fade delay={250} timeout={750} left>
+            <Fade delay={250} timeout={750} bottom>
                 <div className="ProjectView-about">
                     <h3>About</h3>
                     <p>{data.about}</p>

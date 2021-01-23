@@ -21,7 +21,7 @@ const Contact = () => {
       <div className="Contact-contact">
         <div className="Contact-leftContact">
 
-        <Fade timeout={750} left>
+        <Fade timeout={750} top>
             <img src='/img/ContactImg.png' alt="Call to Action" className="Home-contactImg"/>
           </Fade>
           <Fade timeout={750} delay={50} bottom>
