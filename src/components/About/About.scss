@@ -73,7 +73,7 @@
 
     flex-shrink: 0;
 
-    @include breakpoint(tablet){
+    @include breakpoint(tablet_ONLY){
       max-width: 400px;
     }
 
