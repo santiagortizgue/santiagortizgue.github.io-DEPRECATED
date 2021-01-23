@@ -7,7 +7,7 @@
 
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
@@ -46,7 +46,7 @@
 
         margin-top: 45px;
 
-        @include breakpoint(tablet){
+        @include breakpoint(laptop){
             flex-direction: row;
             justify-content: space-between;
         }
@@ -66,7 +66,11 @@
 
         color: $blackColor;
 
-        @include breakpoint(tablet){
+        @include breakpoint(laptop) {
+            width: 80%;
+        }
+
+        @include breakpoint(desktop) {
             width: 520px;
         }
 
@@ -90,7 +94,7 @@
 
         color: $blackColor;
 
-        @include breakpoint(tablet){
+        @include breakpoint(laptop){
             text-align: right;
         }
 
@@ -126,10 +130,9 @@
         justify-content: flex-end;
         align-content: center;
         align-items: center;
-
     
         @include breakpoint(desktop){
-            width: 100%;
+            width: 662px;
         }
         
         @include breakpoint(large_desktop){
@@ -248,14 +251,22 @@
         justify-content: flex-start;
         align-content: center;
         align-items: center;
+
+        @include breakpoint(desktop){
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: flex-start;
+            align-items: flex-start;
+        }
     }
 
     &-wireSmall{
         width: 100%;
         margin-bottom: 25px;
 
-        @include breakpoint(laptop){
+        @include breakpoint(desktop){
             margin-bottom: 0;
+            width: 340px;
         }
 
         @include breakpoint(large_desktop){
@@ -279,6 +290,10 @@
         align-content: flex-start;
         align-items: flex-start;
 
+        @include breakpoint(desktop){
+            width: 520px;
+        }
+
         @include breakpoint(large_desktop){
             width: 780px;
         }
@@ -295,6 +310,12 @@
         align-items: center;
 
         padding: 20px;
+
+        @include breakpoint(desktop){
+            padding: 0;
+
+            height: 142px;
+        }
         
 
         >h3 {
@@ -312,8 +333,12 @@
 
             margin-right: 20px;
 
-            @include breakpoint(laptop){
-                width: 151px;
+            margin-bottom: 10px;
+
+            @include breakpoint(desktop){
+                margin-right: 0;
+                margin-bottom: 0;
+                width: 120px;
             }
 
             @include breakpoint(large_desktop){
@@ -323,7 +348,7 @@
         }
 
         >p {    
-
+            width: auto;
             font-family: $textFont;
             font-style: normal;
             font-weight: normal;
@@ -331,14 +356,14 @@
             line-height: 140%;
 
             color: $blackColor;
+
+            @include breakpoint(desktop){
+                width: 373px;
+            }
             
             @include breakpoint(large_desktop){
                 width: 538px;
                 font-size: 18px;
-            }
-
-            @include breakpoint(laptop){
-                width: 491px;
             }
         }
     }
@@ -350,7 +375,7 @@
         margin-top: 45px;
 
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
         align-content: flex-start;
@@ -375,20 +400,21 @@
         align-content: flex-start;
         align-items: flex-start;
 
-        @include breakpoint(large_desktop){
-            margin-top: 45px;
-        }
-
-        @include breakpoint(laptop){
+        @include breakpoint(desktop){
             flex-direction: row;
             justify-content: flex-end;
+            justify-content: space-between;
+        }
+
+        @include breakpoint(large_desktop){
+            margin-top: 45px;
         }
 
         >h3 {
             width: auto;
             height: auto;
 
-            text-align: right;
+            text-align: left;
 
             font-family: $titleFont;
             font-style: normal;
@@ -398,9 +424,15 @@
 
             color: $blackColor;
 
-            margin-right: 20px;
-
             margin-bottom: 20px;
+
+            @include breakpoint(desktop){
+                text-align: right;
+
+                width: 340px;
+
+                margin-bottom: 0;
+            }
             
             @include breakpoint(large_desktop){
                 width: 510px;
@@ -419,6 +451,11 @@
             line-height: 140%;
 
             color: $blackColor;
+
+            @include breakpoint(desktop){
+                width: 520px;
+            }
+            
 
             @include breakpoint(large_desktop){
                 width: 782px;
@@ -453,11 +490,16 @@
         margin-bottom: 70px;
 
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
         align-items: flex-start;
+
+        @include breakpoint(tablet){
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         @include breakpoint(large_desktop){
             margin-top: 110px;
@@ -478,7 +520,7 @@
     }
 
     &-moreContainer{
-        width: 50%;
+        width: 100%;
         height: auto;
 
         display: flex;
@@ -487,6 +529,10 @@
         justify-content: flex-start;
         align-content: flex-start;
         align-items: flex-start;
+
+        @include breakpoint(tablet){
+            width: 50%;
+        }
     }
 
     &-contButtons {
@@ -502,6 +548,12 @@
         justify-content: flex-start;
         align-content: center;
         align-items: flex-end;
+
+        margin-bottom: 25px;
+
+        @include breakpoint(tablet){
+            margin-bottom: 0;
+        }
 
         @include breakpoint(large_desktop){
             margin-top: 35px;
@@ -587,7 +639,7 @@
     }
 
     &-teammates {
-        width: 50%;
+        width: 100%;
         height: auto;
 
         display: flex;
@@ -595,7 +647,15 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         align-content: center;
-        align-items: flex-end;
+        align-items: flex-start;
+
+        margin-bottom: 25px;
+
+        @include breakpoint(tablet){
+            width: 50%;
+            align-items: flex-end;
+            
+        }
 
         >h3 {
             font-family: $titleFont;
@@ -625,7 +685,11 @@
         flex-wrap: nowrap;
         justify-content: flex-start;
         align-content: flex-start;
-        align-items: flex-end;
+        align-items: flex-start;
+
+        @include breakpoint(tablet){
+            align-items: flex-end;
+        }
 
         @include breakpoint(large_desktop){
             margin-top: 35px;

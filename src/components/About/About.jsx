@@ -17,10 +17,10 @@ const About = () => {
 
   function changeRightInfoHandler(value) {
     return (
-        <div className="About-infoRight">
-          <img className="About-infoImg" src={`./img/about/${value.id}.png`} alt="skills and photos" />
-          <h5 className="About-infoDetail">{value.data}</h5>
-        </div>
+      <div className="About-infoRight">
+        <img className="About-infoImg" src={`./img/about/${value.id}.png`} alt="skills and photos" />
+        <h5 className="About-infoDetail">{value.data}</h5>
+      </div>
     )
   }
 
@@ -28,26 +28,28 @@ const About = () => {
     <div className="About">
 
       <div className="About-top">
+
         <div className="About-topLeft">
 
-          <Fade timeout={750} left>
-            <div style={{ backgroundImage: "url('./img/about.jpg')" }} className="About-img">
+            <div className="About-imgContainer">
+
+              <img src="./img/about.jpg" alt="Profile" className="About-img" />
+
               <div className="About-name">
                 <h4>Santiago</h4>
                 <h6>Ortiz Guevara</h6>
               </div>
-            </div>
-          </Fade>
 
-          <Fade timeout={750} delay={250} cascade>
+            </div>
+      
             <div className="About-title">
               <h4>About me</h4>
               <h6>Bio</h6>
             </div>
-          </Fade>
+        
         </div>
 
-        <Fade timeout={1250} delay={350}>
+        <Fade timeout={1000} delay={250}>
           <div className="About-topRight">
             <p>I’m Santiago, a 22 years old Colombian <strong>Product Designer</strong> from ICESI University. I’ve worked with <strong>user interface</strong>, <strong>user experience</strong> and <strong>development</strong> on multiple platforms.
               <br></br> <br></br> <br></br> My <strong>creativity</strong> allows me to build experiences and interfaces, based on human feelings and needs. I'm <strong>always learning</strong> new methodologies, software and strategies to develop these experiences.
@@ -58,20 +60,20 @@ const About = () => {
 
       <div className="About-info">
 
-      <Fade timeout={1000} delay={150} left>
-        {changeRightInfoHandler(stores.uiStore.actualInfo)}
-      </Fade>
+        <Fade timeout={1000} delay={150} left>
+          {changeRightInfoHandler(stores.uiStore.actualInfo)}
+        </Fade>
 
-      <Fade timeout={1000} delay={150} right>
-        <div className="About-infoLeft">
+        <Fade timeout={1000} delay={150} right>
+          <div className="About-infoLeft">
 
-          <h4>Experience & Skills</h4>
+            <h4>Experience & Skills</h4>
 
-          <div className="About-contSkills">
-            {stores.uiStore.arrayInfo.map((elem) => {
-              let classInfo = (elem.id === stores.uiStore.idActualInfo) ? "About-infoItem About-infoItemSelected" : "About-infoItem";
-              if (elem.type === stores.uiStore.typeSkill) {
-                return (
+            <div className="About-contSkills">
+              {stores.uiStore.arrayInfo.map((elem) => {
+                let classInfo = (elem.id === stores.uiStore.idActualInfo) ? "About-infoItem About-infoItemSelected" : "About-infoItem";
+                if (elem.type === stores.uiStore.typeSkill) {
+                  return (
                     <div onClick={(e) => {
                       e.preventDefault();
                       stores.uiStore.changeInfoHandler(elem.id);
@@ -80,40 +82,39 @@ const About = () => {
                       <p>{elem.name}</p>
 
                     </div>
-                )
-              } else {
-                return '';
-              }
-            })}
-          </div>
+                  )
+                } else {
+                  return '';
+                }
+              })}
+            </div>
 
-          <h4>Talents</h4>
+            <h4>Talents</h4>
 
-          <div className="About-contTalents">
-            {stores.uiStore.arrayInfo.map((elem) => {
-              let classInfo = (elem.id === stores.uiStore.idActualInfo) ? "About-infoItem About-infoItemSelected" : "About-infoItem";
-              if (elem.type === stores.uiStore.typeTalent) {
-                return (
+            <div className="About-contTalents">
+              {stores.uiStore.arrayInfo.map((elem) => {
+                let classInfo = (elem.id === stores.uiStore.idActualInfo) ? "About-infoItem About-infoItemSelected" : "About-infoItem";
+                if (elem.type === stores.uiStore.typeTalent) {
+                  return (
                     <div onClick={(e) => {
                       e.preventDefault();
                       stores.uiStore.changeInfoHandler(elem.id);
                     }} key={elem.id} className={classInfo}>
-                      
+
                       <p>{elem.name}</p>
 
                     </div>
-                )
-              } else {
-                return '';
-              }
-            })}
-          </div>
+                  )
+                } else {
+                  return '';
+                }
+              })}
+            </div>
 
-        </div>
+          </div>
         </Fade>
       </div >
 
-      <Fade timeout={1000} top>
         <div className="About-research">
 
           <h3 className="About-researchTitle">
@@ -133,9 +134,8 @@ const About = () => {
 
           </div>
 
-          <div style={{ backgroundImage: "url('./img/imgResearch.png')" }} className="About-researchImg"></div>
+          <img src='./img/imgResearch.png' alt="Research" className="About-researchImg"/>
         </div>
-      </Fade>
 
       <footer className="footer">
         <h4>© 2019 Santiago Ortiz Guevara.</h4>
