@@ -253,34 +253,51 @@
 //only mobile
 
 .MobileMenu {
-  display: flex;
   position: fixed;
 
   width: 100%;
-  height: $mobile_menu_height;
-  padding: 20px $mobile_padding;
+  height: auto;
 
   bottom: 0;
 
   z-index: 1;
 
-  background-color: $grayColor;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 
-  flex-direction: row;
-  justify-content: space-between;
-
-  align-items: center;
-  align-content: center;
+  cursor: pointer;
 
   @include breakpoint(tablet) {
     display: none;
   }
 
-  @include breakpoint(laptop) {}
+  &-bar{
+    width: 100%;
+    height: $mobile_menu_height;
+    padding: 20px $mobile_padding;
 
-  @include breakpoint(desktop) {}
+    background-color: $grayColor;
 
-  @include breakpoint(large_desktop) {}
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    align-items: center;
+    align-content: center;
+
+    z-index: 1;
+
+    >h1{
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 120%;
+  
+      color: $blackColor;
+    }
+  }
 
   &-logo {
     display: flex;
@@ -306,13 +323,78 @@
     }
   }
 
-  >h1{
-    font-family: $textFont;
+  &-icon{
+    width: 25px;
+
+    >svg{
+      width: 100%;
+
+      >path{
+        fill: $blackColor;
+      }
+    }
+  }
+
+  //MENU
+
+  &-menu{
+    width: 100%;
+    height: 365px;
+
+    background-color: $grayColor;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px;
+  }
+
+  &-SocialMedia{
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+    >a{
+      width: 25px;
+      height: 25px;
+
+      >svg{
+
+        >path{
+          fill: $blackColor;
+        }
+      }
+    }
+  }
+
+  &-MenuItems{
+    width: 100%;
+    height: 253px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+  }
+
+  &-item{
+    font-family: $titleFont;
     font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 22px;
     line-height: 120%;
 
     color: $blackColor;
+  }
+
+  &-itemSelected{
+    text-decoration: underline;
   }
 }
