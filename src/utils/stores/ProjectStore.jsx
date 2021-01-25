@@ -14,20 +14,20 @@ class ProjectStore {
             year: 2018,
             id: 0,
             subtitle: 'Raven',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+            title: 'Audio-Tactile Priming to Guide Information Recall in Edutainment',
             type: 'project',
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
-            about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            role: 'Application Developer & Scenario artist.',
+            about: "This project is a research for evaluating the effects of stimuli in people perception and learning. In this case, a game experience was designed for learning Kanki from japanese language.",
             topics: [
                 {
-                    name: "Topic 1",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    name: "Goal",
+                    text: "Evaluate the effects of sound, tactile and visual stimuli in gamified learning environments."
                 }, {
-                    name: "Topic 2",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    name: "50%",
+                    text: "As expected, the visual stimuli managed to better guide users and generate positive effects on their learning. Second, 40% of users followed auditory stimuli, leaving only 10% for tactile stimuli."
                 }, {
-                    name: "Topic 3",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    name: "For the Future",
+                    text: "In the middle of the investigacion, an interesting hypothesis emerged: Probably, the followed stimuli by the users was related with their personality. This was found in a qualitative analysis of the user tests."
                 }
             ],
             behance: "https://www.behance.net/gallery/73144851/Raven",
@@ -49,20 +49,20 @@ class ProjectStore {
             year: 2019,
             id: 1,
             subtitle: 'Vibo',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+            title: 'Editing, Visualization and Storing data as a design challenge.',
             type: 'project',
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
-            about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            role: 'Desarrollador Front-End.',
+            about: "DataPico, a data visualization company from Cali, proposed us a challenge for the ‘Integrator Project’ class. This consisted in the creation of a portal so that journalists, researchers and editors could store and present the information for their press articles or virtual newspaper pages.",
             topics: [
                 {
-                    name: "Topic 1",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    name: "Determinants",
+                    text: "For the development of journalistic and informative content, the ux team found it is determinant that the system allows: collaborative work, interfaces adaptable to different user roles and the aforementioned data visualization."
                 }, {
-                    name: "Topic 2",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    name: "Technology",
+                    text: "To achieve this, it was essential to develop the application using web programming languages, powered by React."
                 }, {
-                    name: "Topic 3",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    name: "Challenge",
+                    text: "Adopt the Scrum methodology to optimize communication between the UX, UI and development team, in order to build a solution in an agile and efficient way."
                 }
             ],
             behance: "https://www.behance.net/gallery/88983583/Vibo",
@@ -75,20 +75,20 @@ class ProjectStore {
             year: 2018,
             id: 2,
             subtitle: 'Mingu',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+            title: 'Making it easier to keep friendship through a game experience.',
             type: 'project',
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
-            about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            role: 'Desktop App Developer & User Interface Designer.',
+            about: "Despite the human need to be a social being, nowadays we found ourselves separated. The sociocultural context we are exposed to changes our way to behave and how we build relationships. This project tries to find a way in which through the incorporation of an experience in the daily activities, the friendships can be boosted using a popular game with changes in their experiences that boost the connection between individuals.",
             topics: [
                 {
-                    name: "Topic 1",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    name: "Research",
+                    text: "The team focused on finding those elements that promote friendship, generate distances, existing patterns of friendship and the importance of intimacy in interpersonal relationships."
                 }, {
-                    name: "Topic 2",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    name: "Key Findings",
+                    text: "We found that although the lack of contact does not break friendship, it weakens their survival in the medium term. Also, we learned the importance of trust on the number of short-term encounters."
                 }, {
-                    name: "Topic 3",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    name: "Results",
+                    text: "The solution system generates a positive experience in the individuals. It’d be interesting to integrate new interactions that implies eliminating the tactile controllers like voice recognition."
                 }
             ],
             behance: "https://www.behance.net/gallery/88987115/Mingu",
@@ -110,20 +110,17 @@ class ProjectStore {
             year: 2020,
             id: 3,
             subtitle: 'Aurora',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+            title: 'Changing Latam through online education & technology.',
             type: 'project',
-            role: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
-            about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            role: 'User Interface Designer.',
+            about: "Aurora was born from the belief of power to change Latin America through the integration of technology and education. Recognized as a Full Education Company, it is focused on technical training and education. It is a web platform that allows people to acquire new skills and job skills, to stand out in a more competitive future.",
             topics: [
                 {
-                    name: "Topic 1",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    name: "Look and Feel",
+                    text: "According to UX requirements and & the brand manual, the web application that will train Latin American workers was built from a clean, friendly and modern design."
                 }, {
-                    name: "Topic 2",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                }, {
-                    name: "Topic 3",
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    name: "5 minutes Experience",
+                    text: "I worked with a team with more than 5 years of experience in interaction design and user research. They know that Colombian workers do not have a lot of free time in their workday, which requires a quick and easily accessible learning experience. Then, the platform's MVP was built with interaction patterns aligned to these educational requirements."
                 }
             ],
             behance: null,
