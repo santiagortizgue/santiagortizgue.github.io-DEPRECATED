@@ -10,6 +10,7 @@
 body {
   background-color: $whiteColor;
   width: 100%;
+  height: auto;
 
   /*Scroll bar not visible*/
   &::-webkit-scrollbar {

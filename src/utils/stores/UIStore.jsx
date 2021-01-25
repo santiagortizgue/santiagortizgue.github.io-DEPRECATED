@@ -6,10 +6,7 @@ class UIStore {
 
     arrayWhatProfile = [{
         id: 0,
-        data: 'Product Design'
-    }, {
-        id: 1,
-        data: 'Product Development'
+        data: 'Product Design & Development'
     }];
 
     arrayWhatOther = [{
@@ -17,13 +14,10 @@ class UIStore {
         data: 'User Interface Design'
     }, {
         id: 1,
-        data: 'User Experience Design'
-    }, {
-        id: 2,
         data: 'Front-End Development'
     }, {
-        id: 3,
-        data: 'Photography'
+        id: 2,
+        data: 'User Experience Design'
     }];
 
     selectWhat(i) {
@@ -74,47 +68,47 @@ class UIStore {
         name: 'UI Design',
         id: 0,
         type: 'skill',
-        data: "Text"
+        data: "According to people's needs, I create attractive design systems & patterns to develop applications."
     }, {
-        name: 'Prototyping',
+        name: 'Web Development',
         id: 1,
         type: 'skill',
-        data: "Text"
+        data: "Then, build these interactions with the best practices. I'm always learning new frameworks."
     }, {
-        name: 'UX Design',
+        name: 'Prototyping',
         id: 2,
         type: 'skill',
-        data: "Text"
+        data: "Co-creation with users is always essential when I’m making design concepts & user experience ideas."
     },{
-        name: 'Web Development',
+        name: 'UX Design',
         id: 3,
         type: 'skill',
-        data: "Text"
+        data: "Empathy with people makes me imagine the best way users can interact with digital experiences."
     },{
         name: 'Photography',
         id: 4,
         type: 'skill',
-        data: "Text"
+        data: "Seeing the world through a lens helps me stimulate my creativity."
+    }, {
+        name: 'Creativity',
+        id: 5,
+        type: 'talent',
+        data: "Constantly observing what surrounds me holistically, allows me to strengthen my work generating new ideas."
     }, {
         name: 'Problem Solving',
-        id: 5,
+        id: 6,
         type: 'talent',
         data: "Using research through design to find solutions for people's challenges, complexities & needs."
     }, {
         name: 'Results Orientation',
-        id: 6,
+        id: 7,
         type: 'talent',
         data: "Constantly remembering the objective and goals, allows my work to satisfy the required guidelines."
     }, {
         name: 'Teamwork',
-        id: 7,
-        type: 'talent',
-        data: "Working with my colleagues to achieve the objectives. I find my place to strengthen the work of my workmates."
-    }, {
-        name: 'Creativity',
         id: 8,
         type: 'talent',
-        data: "Constantly observing what surrounds me holistically, allows me to strengthen my work generating new ideas."
+        data: "Working with my colleagues to achieve the objectives. I find my place to strengthen the work of my workmates."
     }]
 
     actualInfo = this.arrayInfo[this.idActualInfo];

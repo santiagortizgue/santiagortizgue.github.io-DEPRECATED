@@ -266,8 +266,6 @@
   flex-direction: column;
   flex-wrap: nowrap;
 
-  cursor: pointer;
-
   @include breakpoint(tablet) {
     display: none;
   }
@@ -296,6 +294,8 @@
       line-height: 120%;
   
       color: $blackColor;
+
+      cursor: pointer;
     }
   }
 
@@ -304,6 +304,8 @@
 
     width: 16px;
     height: 30px;
+
+    cursor: pointer;
 
     >svg {
       width: 100%;
@@ -326,6 +328,8 @@
   &-icon{
     width: 25px;
 
+    cursor: pointer;
+
     >svg{
       width: 100%;
 
@@ -347,6 +351,8 @@
     flex-direction: column;
 
     padding: 25px;
+
+    cursor: pointer;
   }
 
   &-SocialMedia{
@@ -363,6 +369,8 @@
     >a{
       width: 25px;
       height: 25px;
+
+      cursor: pointer;
 
       >svg{
 
@@ -390,6 +398,8 @@
     font-weight: bold;
     font-size: 22px;
     line-height: 120%;
+
+    cursor: pointer;
 
     color: $blackColor;
   }

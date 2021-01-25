@@ -104,7 +104,7 @@ export const Message = () => {
     return (
         <Fade collapse timeout={1000} right>
             <a href={`malito:${stores.uiStore.email}`} className="Message">
-                <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 22 22">
                     <path fillRule="evenodd" clipRule="evenodd" d="M2.74999 2.75H19.25C20.2625 2.75 21.0833 3.57081 21.0833 4.58333V17.4167C21.0833 18.4292 20.2625 19.25 19.25 19.25H2.74999C1.73747 19.25 0.916656 18.4292 0.916656 17.4167V4.58333C0.916656 3.57081 1.73747 2.75 2.74999 2.75ZM2.74999 8.8166V17.4167H19.25V8.81699L11 12.942L2.74999 8.8166ZM2.74999 6.76683L11 10.8923L19.25 6.76726V4.58333H2.74999V6.76683Z" />
                 </svg>
             </a>
@@ -172,7 +172,7 @@ export const MobileMenu = () => {
                             let stringClass = (stores.uiStore.actualLink === link.id) ? "MobileMenu-item MobileMenu-itemSelected" : "MobileMenu-item";
                             return (
                                 <Link key={link.id} to={link.link}
-                                onClick={()=>{ setToggle(true); }}>
+                                    onClick={() => { setToggle(true); }}>
                                     <h2 className={stringClass}>{link.name}</h2>
                                 </Link>
                             )
@@ -194,9 +194,9 @@ export const MobileMenu = () => {
 
                 <h1>santiag<strong>ortiz</strong>gue</h1>
 
-                <div onClick={() => { 
+                <div onClick={() => {
                     setToggle(!toggle);
-                 }} className="MobileMenu-icon">
+                }} className="MobileMenu-icon">
                     {toggle ?
                         <svg className="Menu-icon" viewBox="0 0 20 18">
                             <path fillRule="evenodd" clipRule="evenodd" d="M0 0V2.8H20V0H0ZM0 10V7.20001H20V10H0ZM0 17.2V14.4H20V17.2H0Z" />
