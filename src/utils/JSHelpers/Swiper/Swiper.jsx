@@ -18,6 +18,7 @@ export default (props) => {
             spaceBetween={0}
             slidesPerView={1}
             onSwiper={(swiper) => setSwiper(swiper)}
+            loop={true}
         >
             {props.slides.map((i, index) => {
                 return (
