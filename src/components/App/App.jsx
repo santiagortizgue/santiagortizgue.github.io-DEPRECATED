@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, HashRouter } from 'react-router-dom';
 import { observer } from 'mobx-react-lite';
 import './App.scss';
 
@@ -26,7 +26,7 @@ const App = () => {
   return (
     <div className="App">
 
-      <BrowserRouter>
+      <HashRouter>
 
         <Switch>
           <Route path="/" component={Home} exact />
@@ -44,7 +44,7 @@ const App = () => {
         <Message />
         <MobileMenu />
 
-      </BrowserRouter>
+      </HashRouter>
 
     </div>
   )
