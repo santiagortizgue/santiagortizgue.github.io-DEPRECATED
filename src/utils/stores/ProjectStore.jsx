@@ -40,7 +40,7 @@ class ProjectStore {
                 name: "Sebastián Restrepo",
                 route: "https://www.instagram.com/seb.rq"
             },{
-                name: "Nicolás Martinez",
+                name: "Nicolás Martínez",
                 route: "https://www.instagram.com/nicolas26982"
             }]
         }, {
@@ -49,7 +49,7 @@ class ProjectStore {
             year: 2019,
             id: 1,
             subtitle: 'Vibo',
-            title: 'Editing, Visualization and Storing data as a design challenge.',
+            title: 'Editing, Visualization and Storage data as a design challenge.',
             type: 'project',
             role: 'Front-End Developer.',
             about: "DataPico, a data visualization company from Cali, proposed us a challenge for the ‘Integrator Project’ class. This consisted in the creation of a portal so that journalists, researchers and editors could store and present the information for their press articles or virtual newspaper pages.",
@@ -98,7 +98,7 @@ class ProjectStore {
                 name: "Estefanía Montaña",
                 route: "https://www.instagram.com/emonbui"
             },{
-                name: "Cristian Rodriguez",
+                name: "Cristian Rodríguez",
                 route: "https://www.instagram.com/candiescense"
             }]
         }, {
