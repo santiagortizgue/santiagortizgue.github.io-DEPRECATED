@@ -17,17 +17,17 @@ class ProjectStore {
             title: 'Audio-Tactile Priming to Guide Information Recall in Edutainment',
             type: 'project',
             role: 'Application Developer & Scenario artist.',
-            about: "This project is a research for evaluating the effects of stimuli in people perception and learning. In this case, a game experience was designed for learning Kanki from japanese language.",
+            about: "This project is a research for evaluating the effects of stimuli in people perception and learning. In this case, a game experience was designed for learning Kanji from japanese language.",
             topics: [
                 {
                     name: "Goal",
                     text: "Evaluate the effects of sound, tactile and visual stimuli in gamified learning environments."
                 }, {
                     name: "50%",
-                    text: "As expected, the visual stimuli managed to better guide users and generate positive effects on their learning. Second, 40% of users followed auditory stimuli, leaving only 10% for tactile stimuli."
+                    text: "As expected, the visual stimuli managed to guide users and generate positive effects on their learning. Additionally, 40% of users followed auditory stimuli, leaving only 10% for tactile stimuli."
                 }, {
                     name: "For the Future",
-                    text: "In the middle of the investigacion, an interesting hypothesis emerged: Probably, the followed stimuli by the users was related with their personality. This was found in a qualitative analysis of the user tests."
+                    text: "During the investigation, an interesting hypothesis emerged: Probably, the followed stimuli by the users was related with their personality. This was found in a qualitative analysis of the user tests."
                 }
             ],
             behance: "https://www.behance.net/gallery/73144851/Raven",
@@ -52,17 +52,17 @@ class ProjectStore {
             title: 'Editing, Visualization and Storage data as a design challenge.',
             type: 'project',
             role: 'Front-End Developer.',
-            about: "DataPico, a data visualization company from Cali, proposed us a challenge for the ‘Integrator Project’ class. This consisted in the creation of a portal so that journalists, researchers and editors could store and present the information for their press articles or virtual newspaper pages.",
+            about: "DataPico, a data visualization company from Cali, proposed a challenge for the ‘Integrator Project’ class. This consisted in the creation of a portal where journalists, researchers and editors could store and present the information for their press articles or virtual newspaper pages.",
             topics: [
                 {
                     name: "Determinants",
-                    text: "For the development of journalistic and informative content, the ux team found it is determinant that the system allows: collaborative work, interfaces adaptable to different user roles and the aforementioned data visualization."
+                    text: "For the development of journalistic and informative content, the ux team found it is determinant that the system allows: collaborative work, adaptable interfaces to different user roles and data visualization."
                 }, {
                     name: "Technology",
                     text: "To achieve this, it was essential to develop the application using web programming languages, powered by React."
                 }, {
                     name: "Challenge",
-                    text: "Adopt the Scrum methodology to optimize communication between the UX, UI and development team, in order to build a solution in an agile and efficient way."
+                    text: "Adopting the Scrum methodology to optimize communication between the UX, UI and development team, in order to build a solution in an ‘agile’ and efficient way."
                 }
             ],
             behance: "https://www.behance.net/gallery/88983583/Vibo",
@@ -75,20 +75,20 @@ class ProjectStore {
             year: 2018,
             id: 2,
             subtitle: 'Mingu',
-            title: 'Making it easier to keep friendship through a game experience.',
+            title: 'Enhance your friendship through a game experience.',
             type: 'project',
             role: 'Desktop App Developer & User Interface Designer.',
-            about: "Despite the human need to be a social being, nowadays we found ourselves separated. The sociocultural context we are exposed to changes our way to behave and how we build relationships. This project tries to find a way in which through the incorporation of an experience in the daily activities, the friendships can be boosted using a popular game with changes in their experiences that boost the connection between individuals.",
+            about: "Despite the human need to socialize, nowadays we found ourselves separated. The sociocultural context we are exposed to, changes our way to behave and how we build relationships. This project tries to find a way in which through the incorporation of an experience in the daily activities, the friendships can be boosted using a popular game with changes in their experiences that boost the connection between individuals.",
             topics: [
                 {
                     name: "Research",
-                    text: "The team focused on finding those elements that promote friendship, generate distances, existing patterns of friendship and the importance of intimacy in interpersonal relationships."
+                    text: "The team focused on finding elements that promote friendship, generate distances, existing patterns of friendship and the importance of intimacy in interpersonal relationships."
                 }, {
                     name: "Key Findings",
-                    text: "We found that although the lack of contact does not break friendship, it weakens their survival in the medium term. Also, we learned the importance of trust on the number of short-term encounters."
+                    text: "We found that although the lack of contact does not break friendship, it causes negative effects in the trust between them. Also, we learned the importance of trust on the number of short-term encounters."
                 }, {
                     name: "Results",
-                    text: "The solution system generates a positive experience in the individuals. It’d be interesting to integrate new interactions that implies eliminating the tactile controllers like voice recognition."
+                    text: "The solution system generates a positive experience in the individuals. It’d be interesting to integrate new interactions that implies removing tactile controllers, such as voice & movement recognition."
                 }
             ],
             behance: "https://www.behance.net/gallery/88987115/Mingu",
@@ -117,10 +117,10 @@ class ProjectStore {
             topics: [
                 {
                     name: "Look and Feel",
-                    text: "According to UX requirements and & the brand manual, the web application that will train Latin American workers was built from a clean, friendly and modern design."
+                    text: "According to UX requirements & the brand manual, the web application that will train Latin American workers was built from a clean, friendly and modern design."
                 }, {
                     name: "5 minutes Experience",
-                    text: "I worked with a team with more than 5 years of experience in interaction design and user research. They know that Colombian workers do not have a lot of free time in their workday, which requires a quick and easily accessible learning experience. Then, the platform's MVP was built with interaction patterns aligned to these educational requirements."
+                    text: "I worked with a team with more than 5 years of experience in interaction design and user research. They know that Colombian workers do not have a lot of free time in their workday, which requires a quick and easily accessible learning experience. Therefore, the platform's MVP was built with interaction patterns aligned to these educational requirements."
                 }
             ],
             behance: null,
