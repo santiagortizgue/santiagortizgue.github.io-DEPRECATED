@@ -14,10 +14,10 @@ class UIStore {
         data: 'User Interface Design'
     }, {
         id: 1,
-        data: 'Front-End Development'
+        data: 'User Experience Design'
     }, {
         id: 2,
-        data: 'User Experience Design'
+        data: 'Front-End Development'
     }];
 
     selectWhat(i) {

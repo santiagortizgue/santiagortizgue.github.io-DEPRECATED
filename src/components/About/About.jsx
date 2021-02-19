@@ -51,7 +51,7 @@ const About = () => {
 
         <Fade timeout={1000} delay={250}>
           <div className="About-topRight">
-            <p>I’m Santiago, a 22 years old Colombian <strong>Product Designer</strong> from ICESI University. I’ve worked with <strong>user interface</strong>, <strong>user experience</strong> and <strong>development</strong> on multiple platforms.
+            <p>I’m Santiago, a 22 years old Colombian <strong>User Interface Designer</strong> . I’ve worked with <strong>user interface</strong>, <strong>user experience</strong> and <strong>development</strong> on multiple platforms.
               <br></br> <br></br> <br></br> My <strong>creativity</strong> allows me to build experiences and interfaces, based on human feelings and needs. I'm <strong>always learning</strong> new methodologies, software and strategies to develop these experiences.
             </p>
           </div>
