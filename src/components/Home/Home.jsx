@@ -10,15 +10,18 @@ import NavigationButton from 'components/NavigationButton/NavigationButton';
 const Home = () => {
   const stores = useContext(Store);
   const [recent_index, setRecentIndex] = useState(calcIndex());
-  //const [projects, setProjects] = useState([]);
 
   //if the second value of useEffect is empty array [], the behavior its the same as componentDidMount
   useEffect(() => {
     window.scrollTo(0, 0);
     window.addEventListener("resize", updateWidth);
 
+    stores.projectStore.getProjectsFromDB();
+
     return () => {
       window.removeEventListener("resize", updateWidth);
+
+      stores.projectStore.cleanProjectsFromDB();
     }
   }, []);
 
@@ -33,7 +36,6 @@ const Home = () => {
     } else {
       v = 2;
     }
-
     return v;
   }
 

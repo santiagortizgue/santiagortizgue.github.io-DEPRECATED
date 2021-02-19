@@ -2,20 +2,39 @@ import { decorate, observable, action } from 'mobx';
 
 class ProjectStore {
 
-    constructor(db, storage){
+    constructor(db, storage) {
         this.db = db;
         this.storage = storage;
     }
 
-    sortArrayProjects(){
+    sortArrayProjects() {
         this.arrayProjects = this.arrayProjects.slice().sort(sortByYear);
         this.arrayConcepts = this.arrayConcepts.slice().sort(sortByYear);
     }
 
     arrayProjects = [];
 
-    getProjectsFromDB(){
-        
+    projectsRef = null;
+
+    getProjectsFromDB() {
+        this.projectsRef = this.db.collection("projects")
+            .onSnapshot((querySnapshot) => {
+                this.arrayProjects = [];
+                querySnapshot.forEach((doc) => {
+                    console.log(doc.data());
+
+                    let temp_peroject = {
+                        slides: doc.data().slides
+                    }
+
+                    console.log(temp_peroject);
+                });
+                //console.log("Current projects");
+            });
+    }
+
+    cleanProjectsFromDB(){
+        this.projectsRef();
     }
 
 
@@ -27,7 +46,7 @@ class ProjectStore {
 
     arrayConcepts = [];
 
-    getConceptsById(index){
+    getConceptsById(index) {
         let concept = this.arrayConcepts.find(elem => elem.id === index);
         //console.log(concept);
         return concept;
@@ -38,7 +57,7 @@ class ProjectStore {
         year: "2018 - 2019",
         name: "Audio-tactile priming to guide information recall in edutainment",
         link: "https://ieeexplore.ieee.org/document/9212866"
-    },{
+    }, {
         id: 1,
         year: "2019",
         name: "Thesis (In coming)",
@@ -46,7 +65,7 @@ class ProjectStore {
     }];
 }
 
-function sortByYear(a, b){
+function sortByYear(a, b) {
     return b.year - a.year;
 }
 

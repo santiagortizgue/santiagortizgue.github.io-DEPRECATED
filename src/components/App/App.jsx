@@ -19,9 +19,9 @@ const App = () => {
 
   //if the second value of useEffect is empty array [], the behavior its the same as componentDidMount
   useEffect(() => {
-    stores.projectStore.sortArrayProjects();
+    stores.authStore.signInDefaultUser();
 
-  }, [stores.projectStore]);
+  }, [stores.authStore]);
 
   return (
     <div className="App">
