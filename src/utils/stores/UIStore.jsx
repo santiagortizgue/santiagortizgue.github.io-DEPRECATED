@@ -11,13 +11,13 @@ class UIStore {
 
     arrayWhatOther = [{
         id: 0,
-        data: 'User Interface Design'
+        data: 'Front-End Development'
     }, {
         id: 1,
         data: 'User Experience Design'
     }, {
         id: 2,
-        data: 'Front-End Development'
+        data: 'User Interface Design'
     }];
 
     selectWhat(i) {
